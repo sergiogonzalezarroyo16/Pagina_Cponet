@@ -1,0 +1,3178 @@
+/* =========================================================
+   WEBINARS · GRUPO CPONET
+   ========================================================= */
+
+
+/* =========================================================
+   1. HERO · PÁGINA DE LISTADO
+   ========================================================= */
+
+.webinar-page-hero {
+
+    background: var(--navy);
+
+    padding: 95px 0 90px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+.webinar-page-hero .page-hero-content {
+
+    max-width: 850px;
+
+}
+
+.webinar-page-hero .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--accent);
+
+}
+
+.webinar-page-hero h1 {
+
+    margin: 0 0 22px;
+
+    color: #fff;
+
+    font-size: clamp(3rem, 6vw, 5.2rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+}
+
+.webinar-page-hero p {
+
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #b1bec9;
+
+    font-size: 1.12rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   2. INTRODUCCIÓN · LISTADO
+   ========================================================= */
+
+.webinars-intro {
+
+    padding: 75px 0 65px;
+
+    background: #fff;
+
+}
+
+.webinars-intro-content {
+
+    max-width: 850px;
+
+}
+
+.webinars-intro .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+}
+
+.webinars-intro h2 {
+
+    max-width: 850px;
+
+    margin: 0 0 20px;
+
+    color: var(--navy);
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+
+}
+
+.webinars-intro p {
+
+    max-width: 750px;
+
+    margin: 0;
+
+    color: #536575;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   3. LISTADO DE WEBINARS
+   ========================================================= */
+
+.webinars-list {
+
+    padding: 70px 0 90px;
+
+    background: #f5f7f9;
+
+}
+
+.webinars-list .section-header {
+
+    max-width: 850px;
+
+    margin-bottom: 45px;
+
+}
+
+.webinars-list .section-header .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--accent);
+
+}
+
+.webinars-list .section-header h2 {
+
+    margin: 0 0 15px;
+
+    color: var(--navy);
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+
+}
+
+.webinars-list .section-header p {
+
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #667383;
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   4. GRID DE WEBINARS
+   ========================================================= */
+
+.webinars-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+    align-items: stretch;
+
+}
+
+
+/* =========================================================
+   5. TARJETA WEBINAR
+   ========================================================= */
+
+.webinar-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid rgba(4, 18, 34, 0.08);
+
+    border-radius: 8px;
+
+    box-shadow: 0 12px 35px rgba(4, 18, 34, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+.webinar-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(4, 18, 34, 0.14);
+
+    box-shadow: 0 20px 45px rgba(4, 18, 34, 0.1);
+
+}
+
+
+/* =========================================================
+   6. IMAGEN TARJETA
+   ========================================================= */
+
+.webinar-card-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 245px;
+
+    overflow: hidden;
+
+    background: var(--navy);
+
+}
+
+.webinar-card-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.3s ease;
+
+}
+
+.webinar-card:hover .webinar-card-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================================
+   7. CATEGORÍA TARJETA
+   ========================================================= */
+
+.webinar-card-category {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 11px;
+
+    background: var(--navy);
+
+    color: #fff;
+
+    border-radius: 3px;
+
+    font-size: 0.63rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   8. CONTENIDO TARJETA
+   ========================================================= */
+
+.webinar-card-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 30px;
+
+}
+
+.webinar-card-date {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+}
+
+.webinar-card-content h3 {
+
+    margin: 0 0 15px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: 1.45rem;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.02em;
+
+}
+
+.webinar-card-content p {
+
+    margin: 0 0 22px;
+
+    color: #667383;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   9. META TARJETA
+   ========================================================= */
+
+.webinar-card-meta {
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    margin-bottom: 22px;
+
+    border-top: 1px solid rgba(4, 18, 34, 0.08);
+
+}
+
+.webinar-card-meta span {
+
+    color: #718292;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   10. BOTÓN TARJETA
+   ========================================================= */
+
+.webinar-card .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+}
+
+.webinar-card .btn span {
+
+    transition: transform 0.25s ease;
+
+}
+
+.webinar-card .btn:hover span {
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================================
+   11. WEBINAR PRÓXIMAMENTE
+   ========================================================= */
+
+.webinar-card .btn-secondary {
+
+    opacity: 0.7;
+
+    cursor: default;
+
+}
+
+.webinar-card .btn-secondary:hover {
+
+    transform: none;
+
+}
+
+
+/* =========================================================
+   12. CTA LISTADO
+   ========================================================= */
+
+.webinars-cta {
+
+    padding: 85px 0;
+
+    background: var(--navy);
+
+}
+
+.webinars-cta-content {
+
+    max-width: 850px;
+
+}
+
+.webinars-cta .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+}
+
+.webinars-cta h2 {
+
+    max-width: 800px;
+
+    margin: 0 0 20px;
+
+    color: #fff;
+
+    font-size: clamp(2rem, 4vw, 3.3rem);
+
+    line-height: 1.12;
+
+    letter-spacing: -0.03em;
+
+}
+
+.webinars-cta p {
+
+    max-width: 650px;
+
+    margin: 0 0 30px;
+
+    color: #b1bec9;
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   PÁGINA INDIVIDUAL DEL WEBINAR
+   ========================================================= */
+
+
+/* =========================================================
+   13. CABECERA WEBINAR INDIVIDUAL
+   ========================================================= */
+
+.webinar-header {
+
+    background: var(--navy);
+
+    padding: 95px 0 70px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+.webinar-header-content {
+
+    max-width: 1000px;
+
+}
+
+.webinar-header .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    color: var(--accent);
+
+}
+
+.webinar-date {
+
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+}
+
+.webinar-header h1 {
+
+    max-width: 900px;
+
+    margin: 0 0 25px;
+
+    color: #fff;
+
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+
+}
+
+.webinar-intro {
+
+    max-width: 760px;
+
+    margin: 0 0 30px;
+
+    color: #b1bec9;
+
+    font-size: 1.15rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   14. META DEL HERO
+   ========================================================= */
+
+.webinar-hero-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px 35px;
+
+    margin-top: 25px;
+
+}
+
+.webinar-hero-meta span {
+
+    position: relative;
+
+    color: #fff;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+}
+
+.webinar-hero-meta span + span::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -19px;
+
+    top: 50%;
+
+    width: 4px;
+
+    height: 4px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+}
+
+
+/* =========================================================
+   15. INFORMACIÓN DEL WEBINAR
+   ========================================================= */
+
+.webinar-event-info {
+
+    background: #fff;
+
+    border-bottom: 1px solid rgba(4, 18, 34, 0.09);
+
+}
+
+.webinar-event-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    align-items: stretch;
+
+}
+
+.webinar-event-item {
+
+    min-height: 120px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-right: 1px solid rgba(4, 18, 34, 0.09);
+
+}
+
+.webinar-event-item:first-child {
+
+    padding-left: 0;
+
+}
+
+.webinar-event-item:last-child {
+
+    border-right: 0;
+
+}
+
+.webinar-event-item span {
+
+    color: #718292;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+
+}
+
+.webinar-event-item strong {
+
+    color: var(--navy);
+
+    font-size: 0.88rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   16. CONTADOR
+   ========================================================= */
+
+.webinar-countdown-section {
+
+    padding: 45px 0 50px;
+
+    background: #fff;
+
+    border-bottom: 1px solid rgba(4, 18, 34, 0.09);
+
+}
+
+.webinar-countdown {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.webinar-countdown-header {
+
+    margin-bottom: 25px;
+
+}
+
+.webinar-countdown-header .eyebrow {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+}
+
+.webinar-countdown-header h2 {
+
+    margin: 0 0 7px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+
+}
+
+.webinar-countdown-header p {
+
+    margin: 0;
+
+    color: #718292;
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+}
+
+.webinar-countdown-grid {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    width: auto;
+
+}
+
+.webinar-countdown-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 95px;
+
+}
+
+.webinar-countdown-item strong {
+
+    display: block;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+}
+
+.webinar-countdown-item span {
+
+    display: block;
+
+    margin-top: 9px;
+
+    color: #718292;
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.webinar-countdown-separator {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: -15px;
+
+    color: var(--accent);
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+}
+
+.webinar-countdown-finished .webinar-countdown-item strong {
+
+    color: var(--accent);
+
+}
+
+
+/* =========================================================
+   17. SECCIONES GENERALES
+   ========================================================= */
+
+.webinar-content-section {
+
+    padding: 70px 0;
+
+    background: #fff;
+
+}
+
+.webinar-content-section-light {
+
+    background: #f5f7f9;
+
+}
+
+.webinar-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+}
+
+.webinar-content .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+}
+
+.webinar-content h2 {
+
+    max-width: 850px;
+
+    margin: 0 0 22px;
+
+    color: var(--navy);
+
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+
+    line-height: 1.18;
+
+    letter-spacing: -0.025em;
+
+}
+
+.webinar-content p {
+
+    max-width: 800px;
+
+    margin: 0 0 18px;
+
+    color: #536575;
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+.webinar-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.webinar-content strong {
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   18. CABECERA DE SECCIÓN
+   ========================================================= */
+
+.webinar-section-header {
+
+    margin-bottom: 35px;
+
+}
+
+.webinar-section-header .eyebrow {
+
+    margin-bottom: 14px;
+
+}
+
+.webinar-section-header h2 {
+
+    margin-bottom: 15px;
+
+}
+
+.webinar-program-intro {
+
+    max-width: 700px;
+
+}
+
+
+/* =========================================================
+   19. PONENTES
+   ========================================================= */
+
+.webinar-speakers-section {
+
+    padding: 10px 0 70px;
+
+    background: #f5f7f9;
+
+}
+
+.webinar-speakers {
+
+    width: 100%;
+
+}
+
+.webinar-speakers .webinar-section-header {
+
+    max-width: 900px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================================
+   20. PONENTE DESTACADO
+   ========================================================= */
+
+.speaker-featured {
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    min-height: 450px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid rgba(4, 18, 34, 0.08);
+
+    border-radius: 8px;
+
+    box-shadow: 0 15px 40px rgba(4, 18, 34, 0.06);
+
+}
+
+.speaker-featured-reverse {
+
+    grid-template-columns: 58% 42%;
+
+}
+
+
+/* =========================================================
+   21. IMAGEN PONENTE
+   ========================================================= */
+
+.speaker-featured-image {
+
+    min-height: 450px;
+
+    overflow: hidden;
+
+}
+
+.speaker-featured-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+/* =========================================================
+   22. INFORMACIÓN PONENTE
+   ========================================================= */
+
+.speaker-featured-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px 55px;
+
+}
+
+.speaker-role {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.speaker-featured-info h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.025em;
+
+}
+
+.speaker-position {
+
+    margin: 0 0 20px;
+
+    color: #718292;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+}
+
+.speaker-bio {
+
+    max-width: 620px;
+
+    margin: 0 0 25px;
+
+    color: #536575;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   23. LINKEDIN / ENLACE
+   ========================================================= */
+
+.speaker-linkedin {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    color: var(--navy);
+
+    border: 1px solid rgba(4, 18, 34, 0.14);
+
+    border-radius: 4px;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+.speaker-linkedin:hover {
+
+    background: var(--navy);
+
+    color: #fff;
+
+    border-color: var(--navy);
+
+    transform: translateY(-2px);
+
+}
+
+.linkedin-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 22px;
+
+    height: 22px;
+
+    background: var(--navy);
+
+    color: #fff;
+
+    border-radius: 3px;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+}
+
+.speaker-linkedin:hover .linkedin-icon {
+
+    background: var(--accent);
+
+}
+
+
+/* =========================================================
+   24. PROGRAMA
+   ========================================================= */
+
+.webinar-program-section {
+
+    background: #fff;
+
+}
+
+.webinar-program {
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.webinar-program::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+
+    bottom: 20px;
+
+    left: 135px;
+
+    width: 1px;
+
+    background: #d9e0e6;
+
+}
+
+.webinar-program-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 110px 50px 1fr;
+
+    align-items: start;
+
+    min-height: 110px;
+
+    padding: 0 0 38px;
+
+}
+
+.webinar-program-last {
+
+    padding-bottom: 0;
+
+}
+
+
+/* =========================================================
+   25. HORA
+   ========================================================= */
+
+.webinar-program-time {
+
+    padding-top: 3px;
+
+    color: var(--navy);
+
+    font-size: 0.95rem;
+
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    text-align: right;
+
+}
+
+
+/* =========================================================
+   26. MARCADOR
+   ========================================================= */
+
+.webinar-program-marker {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 4px;
+
+}
+
+.webinar-program-marker span {
+
+    display: block;
+
+    width: 12px;
+
+    height: 12px;
+
+    border: 3px solid #fff;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 0 1px var(--navy);
+
+}
+
+
+/* =========================================================
+   27. INFORMACIÓN PROGRAMA
+   ========================================================= */
+
+.webinar-program-info {
+
+    padding-left: 20px;
+
+}
+
+.webinar-program-type {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--accent-2);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.webinar-program-info h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+}
+
+.webinar-program-info p {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #667383;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   28. INTERACCIÓN / BREAK
+   ========================================================= */
+
+.webinar-program-break .webinar-program-marker span {
+
+    background: var(--navy);
+
+    box-shadow: 0 0 0 1px var(--navy);
+
+}
+
+.webinar-program-break .webinar-program-type {
+
+    color: #718292;
+
+}
+
+
+/* =========================================================
+   29. ORGANIZA
+   ========================================================= */
+
+.webinar-organizer-section {
+
+    padding: 75px 0 80px;
+
+    background: #fff;
+
+    border-top: 1px solid rgba(4, 18, 34, 0.06);
+
+    border-bottom: 1px solid rgba(4, 18, 34, 0.06);
+
+}
+
+.webinar-organizer {
+
+    width: 100%;
+
+}
+
+.webinar-organizer .webinar-section-header {
+
+    max-width: 850px;
+
+    margin-bottom: 40px;
+
+}
+
+.webinar-organizer .webinar-section-header .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--accent);
+
+}
+
+.webinar-organizer .webinar-section-header h2 {
+
+    margin: 0 0 16px;
+
+    color: var(--navy);
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+
+}
+
+.webinar-organizer .webinar-section-header p {
+
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #667383;
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   30. TARJETA ORGANIZA
+   ========================================================= */
+
+.webinar-organizer-card {
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-height: 330px;
+
+    overflow: hidden;
+
+    background: #f5f7f9;
+
+    border: 1px solid rgba(4, 18, 34, 0.08);
+
+    border-radius: 8px;
+
+    box-shadow: 0 12px 35px rgba(4, 18, 34, 0.05);
+
+}
+
+
+/* =========================================================
+   31. IMAGEN ORGANIZA
+   ========================================================= */
+
+.webinar-organizer-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 330px;
+
+    padding: 45px;
+
+    background: #fff;
+
+    border-right: 1px solid rgba(4, 18, 34, 0.08);
+
+}
+
+.webinar-organizer-image img {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 80%;
+
+    max-height: 220px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+}
+
+
+/* =========================================================
+   32. INFORMACIÓN ORGANIZA
+   ========================================================= */
+
+.webinar-organizer-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px 55px;
+
+}
+
+.organizer-role {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.webinar-organizer-info h3 {
+
+    margin: 0 0 12px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.025em;
+
+}
+
+.webinar-organizer-info p {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #536575;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   33. PATROCINIO
+   ========================================================= */
+
+.webinar-sponsors-section {
+
+    padding: 75px 0 80px;
+
+    background: #f5f7f9;
+
+    border-top: 1px solid rgba(4, 18, 34, 0.06);
+
+    border-bottom: 1px solid rgba(4, 18, 34, 0.06);
+
+}
+
+
+/* =========================================================
+   34. CABECERA PATROCINIO
+   ========================================================= */
+
+.webinar-sponsors-header {
+
+    max-width: 850px;
+
+    margin-bottom: 40px;
+
+}
+
+.webinar-sponsors-header .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--accent);
+
+}
+
+.webinar-sponsors-header h2 {
+
+    margin: 0 0 16px;
+
+    color: var(--navy);
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+
+}
+
+.webinar-sponsors-header p {
+
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #667383;
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   35. TARJETA PATROCINADOR
+   MISMA ESTRUCTURA QUE ORGANIZA
+   ========================================================= */
+
+.webinar-sponsor-featured {
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-height: 330px;
+
+    overflow: hidden;
+
+    background: #f5f7f9;
+
+    border: 1px solid rgba(4, 18, 34, 0.08);
+
+    border-radius: 8px;
+
+    box-shadow: 0 12px 35px rgba(4, 18, 34, 0.05);
+
+}
+
+
+/* =========================================================
+   36. IMAGEN / LOGO PATROCINADOR
+   MISMO ESTILO QUE ORGANIZA
+   ========================================================= */
+
+.webinar-sponsor-featured-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 330px;
+
+    padding: 45px;
+
+    background: #fff;
+
+    border-right: 1px solid rgba(4, 18, 34, 0.08);
+
+}
+
+.webinar-sponsor-featured-image img {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 80%;
+
+    max-height: 220px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+}
+
+
+/* =========================================================
+   37. INFORMACIÓN PATROCINADOR
+   MISMO ESTILO QUE ORGANIZA
+   ========================================================= */
+
+.webinar-sponsor-featured-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px 55px;
+
+}
+
+
+/* =========================================================
+   38. ROL PATROCINADOR
+   ========================================================= */
+
+.sponsor-role {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   39. NOMBRE PATROCINADOR
+   ========================================================= */
+
+.webinar-sponsor-featured-info h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+/* =========================================================
+   40. POSICIÓN / CLAIM
+   ========================================================= */
+
+.sponsor-position {
+
+    margin: 0 0 20px;
+
+    color: #718292;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   41. DESCRIPCIÓN PATROCINADOR
+   ========================================================= */
+
+.sponsor-bio {
+
+    max-width: 620px;
+
+    margin: 0 0 18px;
+
+    color: #536575;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+}
+
+.webinar-sponsor-featured-info .sponsor-bio:last-of-type {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   42. BOTÓN ORO LABS
+   ========================================================= */
+
+.webinar-sponsor-featured-info .speaker-linkedin {
+
+    margin-top: 0;
+
+}
+
+
+/* =========================================================
+   43. FOLLETO
+   ========================================================= */
+
+.webinar-brochure-section {
+
+    background: #fff;
+
+}
+
+.webinar-brochure-section .webinar-content {
+
+    max-width: 1000px;
+
+}
+
+.webinar-brochure-viewer {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 35px auto 0;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(4, 18, 34, 0.12);
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    box-shadow: 0 15px 40px rgba(4, 18, 34, 0.08);
+
+}
+
+.webinar-brochure-viewer iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 650px;
+
+    border: 0;
+
+}
+
+.webinar-brochure-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================================================
+   44. INSCRIPCIÓN
+   ========================================================= */
+
+.webinar-registration {
+
+    padding: 80px 0;
+
+    background: var(--navy);
+
+}
+
+.webinar-registration-content {
+
+    max-width: 750px;
+
+}
+
+.webinar-registration .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+}
+
+.webinar-registration h2 {
+
+    margin: 0 0 20px;
+
+    color: #fff;
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+
+}
+
+.webinar-registration p {
+
+    max-width: 650px;
+
+    margin: 0 0 30px;
+
+    color: #b1bec9;
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+.webinar-registration .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   45. TABLET · LISTADO
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .webinars-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   46. TABLET · WEBINAR INDIVIDUAL
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* INFORMACIÓN DEL EVENTO */
+
+    .webinar-event-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .webinar-event-item {
+
+        min-height: 110px;
+
+        padding: 25px;
+
+        border-bottom: 1px solid rgba(4, 18, 34, 0.09);
+
+    }
+
+    .webinar-event-item:nth-child(2) {
+
+        border-right: 0;
+
+    }
+
+    .webinar-event-item:first-child {
+
+        padding-left: 25px;
+
+    }
+
+    .webinar-event-item:nth-child(3) {
+
+        border-bottom: 0;
+
+    }
+
+    .webinar-event-item:nth-child(4) {
+
+        border-right: 0;
+
+        border-bottom: 0;
+
+    }
+
+
+    /* CONTADOR */
+
+    .webinar-countdown-grid {
+
+        gap: 10px;
+
+    }
+
+    .webinar-countdown-item {
+
+        min-width: 80px;
+
+    }
+
+
+    /* PROGRAMA */
+
+    .webinar-program::before {
+
+        left: 95px;
+
+    }
+
+    .webinar-program-item {
+
+        grid-template-columns: 75px 40px 1fr;
+
+    }
+
+
+    /* ORGANIZA */
+
+    .webinar-organizer-card {
+
+        grid-template-columns: 42% 58%;
+
+    }
+
+    .webinar-organizer-image {
+
+        padding: 35px;
+
+    }
+
+    .webinar-organizer-image img {
+
+        max-width: 85%;
+
+        max-height: 190px;
+
+    }
+
+    .webinar-organizer-info {
+
+        padding: 40px;
+
+    }
+
+
+    /* PATROCINIO */
+
+    .webinar-sponsor-featured {
+
+        grid-template-columns: 42% 58%;
+
+    }
+
+    .webinar-sponsor-featured-image {
+
+        padding: 35px;
+
+    }
+
+    .webinar-sponsor-featured-image img {
+
+        max-width: 85%;
+
+        max-height: 190px;
+
+    }
+
+    .webinar-sponsor-featured-info {
+
+        padding: 40px;
+
+    }
+
+
+    /* PDF */
+
+    .webinar-brochure-viewer {
+
+        max-width: 750px;
+
+    }
+
+    .webinar-brochure-viewer iframe {
+
+        height: 560px;
+
+    }
+
+}
+
+
+/* =========================================================
+   47. TABLET · PONENTES
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .speaker-featured,
+    .speaker-featured-reverse {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .speaker-featured-reverse .speaker-featured-image {
+
+        order: -1;
+
+    }
+
+    .speaker-featured-image {
+
+        min-height: 380px;
+
+        height: 380px;
+
+    }
+
+    .speaker-featured-info {
+
+        padding: 40px;
+
+    }
+
+
+    /* ORGANIZA */
+
+    .webinar-organizer-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .webinar-organizer-image {
+
+        min-height: 300px;
+
+        height: 300px;
+
+        padding: 40px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(4, 18, 34, 0.08);
+
+    }
+
+    .webinar-organizer-image img {
+
+        max-width: 75%;
+
+        max-height: 190px;
+
+    }
+
+    .webinar-organizer-info {
+
+        padding: 40px;
+
+    }
+
+
+    /* PATROCINIO */
+
+    .webinar-sponsor-featured {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .webinar-sponsor-featured-image {
+
+        min-height: 300px;
+
+        height: 300px;
+
+        padding: 40px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(4, 18, 34, 0.08);
+
+    }
+
+    .webinar-sponsor-featured-image img {
+
+        max-width: 75%;
+
+        max-height: 190px;
+
+    }
+
+    .webinar-sponsor-featured-info {
+
+        padding: 40px;
+
+    }
+
+}
+
+
+/* =========================================================
+   48. MÓVIL · LISTADO
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .webinars-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
+
+    .webinars-list {
+
+        padding: 55px 0 65px;
+
+    }
+
+    .webinars-list .section-header {
+
+        margin-bottom: 32px;
+
+    }
+
+    .webinar-card-image {
+
+        height: 230px;
+
+    }
+
+    .webinar-card-content {
+
+        padding: 25px;
+
+    }
+
+    .webinar-card-content h3 {
+
+        font-size: 1.35rem;
+
+    }
+
+
+    /* ORGANIZA */
+
+    .webinar-organizer-section {
+
+        padding: 60px 0 65px;
+
+    }
+
+    .webinar-organizer .webinar-section-header {
+
+        margin-bottom: 32px;
+
+    }
+
+    .webinar-organizer-card {
+
+        min-height: auto;
+
+    }
+
+    .webinar-organizer-image {
+
+        min-height: 260px;
+
+        height: 260px;
+
+        padding: 30px;
+
+    }
+
+    .webinar-organizer-image img {
+
+        max-width: 80%;
+
+        max-height: 170px;
+
+    }
+
+    .webinar-organizer-info {
+
+        padding: 32px 25px;
+
+    }
+
+
+    /* PATROCINIO */
+
+    .webinar-sponsors-section {
+
+        padding: 60px 0 65px;
+
+    }
+
+    .webinar-sponsors-header {
+
+        margin-bottom: 32px;
+
+    }
+
+    .webinar-sponsor-featured {
+
+        min-height: auto;
+
+    }
+
+    .webinar-sponsor-featured-image {
+
+        min-height: 260px;
+
+        height: 260px;
+
+        padding: 30px;
+
+    }
+
+    .webinar-sponsor-featured-image img {
+
+        max-width: 80%;
+
+        max-height: 170px;
+
+    }
+
+    .webinar-sponsor-featured-info {
+
+        padding: 32px 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+   49. MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .webinar-header {
+
+        padding: 60px 0 55px;
+
+    }
+
+    .webinar-header h1 {
+
+        font-size: 2.35rem;
+
+        line-height: 1.08;
+
+    }
+
+    .webinar-intro {
+
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+
+    }
+
+    .webinar-date {
+
+        font-size: 0.76rem;
+
+    }
+
+    .webinar-hero-meta {
+
+        gap: 10px 25px;
+
+    }
+
+    .webinar-hero-meta span {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    /* INFORMACIÓN */
+
+    .webinar-event-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .webinar-event-item,
+    .webinar-event-item:first-child {
+
+        min-height: auto;
+
+        padding: 22px 0;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(4, 18, 34, 0.09);
+
+    }
+
+    .webinar-event-item:last-child {
+
+        border-bottom: 0;
+
+    }
+
+
+    /* CONTADOR */
+
+    .webinar-countdown-section {
+
+        padding: 40px 0 45px;
+
+    }
+
+    .webinar-countdown-header {
+
+        margin-bottom: 22px;
+
+    }
+
+    .webinar-countdown-header h2 {
+
+        font-size: 1.65rem;
+
+    }
+
+    .webinar-countdown-header p {
+
+        font-size: 0.76rem;
+
+    }
+
+    .webinar-countdown-grid {
+
+        width: 100%;
+
+        gap: 5px;
+
+    }
+
+    .webinar-countdown-item {
+
+        min-width: 0;
+
+        flex: 1;
+
+    }
+
+    .webinar-countdown-item strong {
+
+        font-size: 1.8rem;
+
+    }
+
+    .webinar-countdown-item span {
+
+        margin-top: 7px;
+
+        font-size: 0.52rem;
+
+        letter-spacing: 0.08em;
+
+    }
+
+    .webinar-countdown-separator {
+
+        margin-top: -13px;
+
+        font-size: 1.35rem;
+
+    }
+
+
+    /* SECCIONES */
+
+    .webinar-content-section {
+
+        padding: 50px 0;
+
+    }
+
+
+    /* PONENTES */
+
+    .webinar-speakers-section {
+
+        padding: 40px 0 55px;
+
+    }
+
+    .webinar-speakers .webinar-section-header {
+
+        margin-bottom: 30px;
+
+    }
+
+    .speaker-featured {
+
+        margin-bottom: 20px;
+
+    }
+
+    .speaker-featured-image {
+
+        min-height: 330px;
+
+        height: 330px;
+
+    }
+
+    .speaker-featured-info {
+
+        padding: 32px 25px;
+
+    }
+
+    .speaker-featured-info h3 {
+
+        font-size: 2rem;
+
+    }
+
+    .speaker-bio {
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* ORGANIZA */
+
+    .webinar-organizer-section {
+
+        padding: 50px 0 55px;
+
+    }
+
+    .webinar-organizer .webinar-section-header {
+
+        margin-bottom: 30px;
+
+    }
+
+    .webinar-organizer .webinar-section-header h2 {
+
+        font-size: 1.9rem;
+
+    }
+
+    .webinar-organizer .webinar-section-header p {
+
+        font-size: 0.9rem;
+
+    }
+
+    .webinar-organizer-image {
+
+        min-height: 230px;
+
+        height: 230px;
+
+        padding: 25px;
+
+    }
+
+    .webinar-organizer-image img {
+
+        max-width: 82%;
+
+        max-height: 150px;
+
+    }
+
+    .webinar-organizer-info {
+
+        padding: 30px 25px;
+
+    }
+
+    .webinar-organizer-info h3 {
+
+        font-size: 1.9rem;
+
+    }
+
+    .webinar-organizer-info p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* PATROCINIO */
+
+    .webinar-sponsors-section {
+
+        padding: 50px 0 55px;
+
+    }
+
+    .webinar-sponsors-header h2 {
+
+        font-size: 1.9rem;
+
+    }
+
+    .webinar-sponsors-header p {
+
+        font-size: 0.9rem;
+
+    }
+
+    .webinar-sponsor-featured-image {
+
+        min-height: 230px;
+
+        height: 230px;
+
+        padding: 25px;
+
+    }
+
+    .webinar-sponsor-featured-image img {
+
+        max-width: 82%;
+
+        max-height: 150px;
+
+    }
+
+    .webinar-sponsor-featured-info {
+
+        padding: 30px 25px;
+
+    }
+
+    .webinar-sponsor-featured-info h3 {
+
+        font-size: 1.9rem;
+
+    }
+
+    .sponsor-bio {
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* TIMELINE */
+
+    .webinar-program::before {
+
+        left: 64px;
+
+    }
+
+    .webinar-program-item {
+
+        grid-template-columns: 52px 25px 1fr;
+
+        min-height: 100px;
+
+        padding-bottom: 30px;
+
+    }
+
+    .webinar-program-time {
+
+        font-size: 0.78rem;
+
+        text-align: left;
+
+    }
+
+    .webinar-program-marker {
+
+        padding-top: 3px;
+
+    }
+
+    .webinar-program-marker span {
+
+        width: 10px;
+
+        height: 10px;
+
+    }
+
+    .webinar-program-info {
+
+        padding-left: 12px;
+
+    }
+
+    .webinar-program-type {
+
+        margin-bottom: 5px;
+
+        font-size: 0.62rem;
+
+    }
+
+    .webinar-program-info h3 {
+
+        font-size: 0.98rem;
+
+    }
+
+    .webinar-program-info p {
+
+        font-size: 0.82rem;
+
+        line-height: 1.6;
+
+    }
+
+
+    /* PDF */
+
+    .webinar-brochure-section .webinar-content {
+
+        max-width: 100%;
+
+    }
+
+    .webinar-brochure-viewer {
+
+        margin-top: 30px;
+
+        border-radius: 6px;
+
+    }
+
+    .webinar-brochure-viewer iframe {
+
+        height: 430px;
+
+    }
+
+    .webinar-brochure-actions .btn {
+
+        width: 100%;
+
+    }
+
+
+    /* INSCRIPCIÓN */
+
+    .webinar-registration {
+
+        padding: 60px 0;
+
+    }
+
+    .webinar-registration h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .webinar-registration p {
+
+        font-size: 0.92rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   50. MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .webinar-page-hero {
+
+        padding: 50px 0 45px;
+
+    }
+
+    .webinar-page-hero h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .webinars-intro {
+
+        padding: 45px 0;
+
+    }
+
+    .webinars-intro h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .webinar-card-image {
+
+        height: 205px;
+
+    }
+
+
+    /* HERO */
+
+    .webinar-header {
+
+        padding: 50px 0 45px;
+
+    }
+
+    .webinar-header h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .webinar-content-section {
+
+        padding: 45px 0;
+
+    }
+
+
+    /* CONTADOR */
+
+    .webinar-countdown-grid {
+
+        gap: 2px;
+
+    }
+
+    .webinar-countdown-item strong {
+
+        font-size: 1.5rem;
+
+    }
+
+    .webinar-countdown-item span {
+
+        font-size: 0.46rem;
+
+    }
+
+    .webinar-countdown-separator {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    /* PONENTES */
+
+    .webinar-speakers-section {
+
+        padding: 35px 0 45px;
+
+    }
+
+    .speaker-featured-image {
+
+        min-height: 300px;
+
+        height: 300px;
+
+    }
+
+    .speaker-featured-info {
+
+        padding: 28px 22px;
+
+    }
+
+    .speaker-featured-info h3 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    /* ORGANIZA */
+
+    .webinar-organizer-section {
+
+        padding: 45px 0 50px;
+
+    }
+
+    .webinar-organizer .webinar-section-header h2 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .webinar-organizer-card {
+
+        border-radius: 7px;
+
+    }
+
+    .webinar-organizer-image {
+
+        min-height: 205px;
+
+        height: 205px;
+
+        padding: 20px;
+
+    }
+
+    .webinar-organizer-image img {
+
+        max-width: 85%;
+
+        max-height: 135px;
+
+    }
+
+    .webinar-organizer-info {
+
+        padding: 28px 22px;
+
+    }
+
+    .webinar-organizer-info h3 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .webinar-organizer-info p {
+
+        font-size: 0.86rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* PATROCINIO */
+
+    .webinar-sponsors-section {
+
+        padding: 45px 0 50px;
+
+    }
+
+    .webinar-sponsors-header h2 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .webinar-sponsors-header {
+
+        margin-bottom: 30px;
+
+    }
+
+    .webinar-sponsor-featured {
+
+        border-radius: 7px;
+
+    }
+
+    .webinar-sponsor-featured-image {
+
+        min-height: 205px;
+
+        height: 205px;
+
+        padding: 20px;
+
+    }
+
+    .webinar-sponsor-featured-image img {
+
+        max-width: 85%;
+
+        max-height: 135px;
+
+    }
+
+    .webinar-sponsor-featured-info {
+
+        padding: 28px 22px;
+
+    }
+
+    .webinar-sponsor-featured-info h3 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .sponsor-bio {
+
+        font-size: 0.86rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* TIMELINE */
+
+    .webinar-program::before {
+
+        left: 57px;
+
+    }
+
+    .webinar-program-item {
+
+        grid-template-columns: 45px 24px 1fr;
+
+    }
+
+    .webinar-program-info h3 {
+
+        font-size: 0.92rem;
+
+    }
+
+
+    /* PDF */
+
+    .webinar-brochure-viewer iframe {
+
+        height: 380px;
+
+    }
+
+
+    /* INSCRIPCIÓN */
+
+    .webinar-registration {
+
+        padding: 50px 0;
+
+    }
+
+}

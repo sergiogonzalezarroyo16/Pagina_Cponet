@@ -1,0 +1,160 @@
+.container {
+    width: min(var(--container), calc(100% - 48px));
+    margin: auto
+}
+
+.section {
+    padding: 110px 0
+}
+
+.section-light {
+    background: var(--cream)
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    color: #4d667d;
+    margin-bottom: 18px
+}
+
+.eyebrow-light {
+    color: var(--accent)
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+    margin: 0;
+    color: var(--navy)
+}
+
+h1 {
+    font-size: clamp(3.1rem, 6vw, 6.2rem);
+    line-height: .98;
+    letter-spacing: -.06em
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4.2vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -.05em
+}
+
+h2 em,
+h1 em {
+    font-style: normal;
+    color: #7e9d20
+}
+
+p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--muted)
+}
+
+.lead {
+    font-size: 1.2rem;
+    line-height: 1.7
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid transparent;
+    padding: 14px 21px;
+    font-weight: 800;
+    font-size: .86rem;
+    transition: .25s ease
+}
+
+.btn:hover {
+    transform: translateY(-2px)
+}
+
+.btn-primary {
+    background: var(--navy);
+    color: white
+}
+
+.btn-dark {
+    background: var(--navy);
+    color: white
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: var(--navy)
+}
+
+.btn-outline {
+    border-color: rgba(7, 27, 51, .25);
+    color: var(--navy)
+}
+
+.btn-lg {
+    padding: 17px 24px
+}
+
+.text-link {
+    font-weight: 800;
+    font-size: .9rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 5px
+}
+
+.text-link.light {
+    color: white
+}
+
+.text-link.dark {
+    color: var(--navy)
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center
+}
+
+.section-heading {
+    margin-bottom: 52px
+}
+
+.section-heading.split {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px
+}
+
+.section-heading.split>div:last-child {
+    max-width: 390px
+}
+
+.centered {
+    text-align: center
+}
+
+.light-text h2,
+.light-text p {
+    color: white
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}

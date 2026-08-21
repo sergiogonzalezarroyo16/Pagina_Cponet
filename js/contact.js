@@ -1,0 +1,1 @@
+const form=document.getElementById('contactForm');const message=document.getElementById('formMessage');form?.addEventListener('submit',e=>{e.preventDefault();if(!form.checkValidity()){form.reportValidity();return}message.textContent='¡Gracias! Hemos recibido tu consulta. En una versión con backend, aquí se enviaría al servidor.';form.reset()});

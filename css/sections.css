@@ -1,0 +1,1170 @@
+/* =========================================================
+   SECTIONS.CSS
+   Grupo CPOnet
+   ========================================================= */
+
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 760px;
+    background: var(--navy);
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+/* -----------------------------------------
+   SLIDER
+   ----------------------------------------- */
+
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+
+/* -----------------------------------------
+   FONDOS
+   ----------------------------------------- */
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transform: scale(1.03);
+    transition: transform 7s ease;
+}
+
+
+.hero-slide.active .hero-bg {
+    transform: scale(1);
+}
+
+
+/* Capa oscura para facilitar la lectura */
+
+.hero-bg::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 18, 34, .92) 0%,
+            rgba(4, 18, 34, .70) 45%,
+            rgba(4, 18, 34, .30) 100%
+        );
+}
+
+
+/* -----------------------------------------
+   IMÁGENES DE CADA SLIDE
+   ----------------------------------------- */
+
+.hero-bg-convencion {
+    background-image:
+        url("/images/Cponet138.JPG");
+}
+
+
+.hero-bg-eventos {
+    background-image:
+        url("/images/CponetConvencion.JPG");
+}
+
+
+.hero-bg-webinar {
+    background-image:
+        url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&auto=format&fit=crop");
+}
+
+
+/* -----------------------------------------
+   CONTENIDO
+   ----------------------------------------- */
+
+.hero-slide .hero-content {
+    position: relative;
+    z-index: 5;
+    padding-top: 70px;
+}
+
+
+.hero h1 {
+    color: white;
+    max-width: 800px;
+}
+
+
+.hero h1 em {
+    color: var(--accent);
+}
+
+
+.hero p {
+    color: rgba(255, 255, 255, .8);
+    max-width: 620px;
+    font-size: 1.18rem;
+    margin: 28px 0;
+}
+
+
+.hero-actions {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+
+.hero-slide .hero-content h1,
+.hero-slide .hero-content p,
+.hero-slide .hero-actions {
+    animation: heroContentIn .7s ease both;
+}
+
+
+.hero-slide .hero-content h1 {
+    animation-delay: .1s;
+}
+
+
+.hero-slide .hero-content p {
+    animation-delay: .2s;
+}
+
+
+.hero-slide .hero-actions {
+    animation-delay: .3s;
+}
+
+
+@keyframes heroContentIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* -----------------------------------------
+   ESTADÍSTICAS HERO
+   ----------------------------------------- */
+
+.hero-bottom {
+    position: absolute;
+    z-index: 5;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(0, 0, 0, .18);
+    border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+
+.hero-stats {
+    display: flex;
+    gap: 80px;
+    padding: 25px 0;
+}
+
+
+.hero-stats div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.hero-stats strong {
+    font: 800 1.7rem var(--font-display);
+    color: var(--accent);
+}
+
+
+.hero-stats span {
+    font-size: .72rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, .7);
+}
+
+
+/* -----------------------------------------
+   CONTROLES HERO
+   ----------------------------------------- */
+
+.hero-controls {
+    position: absolute;
+    z-index: 20;
+
+    right: 55px;
+    bottom: 45px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.hero-arrow {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 50%;
+
+    background: rgba(4, 18, 34, .25);
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+.hero-arrow:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--navy);
+
+    transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   PUNTOS
+   ----------------------------------------- */
+
+.hero-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.hero-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .45);
+
+    cursor: pointer;
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+
+.hero-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: var(--accent);
+}
+
+
+/* -----------------------------------------
+   PAUSA AL PASAR EL RATÓN
+   ----------------------------------------- */
+
+.hero:hover .hero-bg {
+    animation-play-state: paused;
+}
+
+
+/* =========================================================
+   2. ABOUT / ELEMENTOS GENERALES
+   ========================================================= */
+
+.about-visual {
+    position: relative;
+}
+
+
+.about-visual img {
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+}
+
+
+.floating-card {
+    position: absolute;
+    bottom: 35px;
+    left: -35px;
+
+    background: var(--accent);
+    color: var(--navy);
+
+    padding: 25px;
+    width: 220px;
+}
+
+
+.floating-card strong {
+    display: block;
+    font: 800 2.6rem var(--font-display);
+}
+
+
+.floating-card span {
+    font-size: .78rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+.icon-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+
+.icon-points div {
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+}
+
+
+.icon-points span {
+    font-size: .65rem;
+    color: #91a1ad;
+}
+
+
+.icon-points b {
+    display: block;
+    margin: 6px 0;
+    font-size: .9rem;
+}
+
+
+.icon-points small {
+    font-size: .72rem;
+    line-height: 1.4;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   3. CONVENCIÓN
+   ========================================================= */
+
+.event-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+
+.event-image {
+    position: relative;
+}
+
+
+.event-image img {
+    height: 560px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.date-badge {
+    position: absolute;
+    right: -20px;
+    top: 25px;
+
+    background: var(--accent);
+
+    width: 88px;
+    height: 88px;
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+
+    font: 800 1.8rem var(--font-display);
+    color: var(--navy);
+}
+
+
+.date-badge small {
+    font-size: .7rem;
+}
+
+
+.event-copy h2 {
+    margin-bottom: 22px;
+}
+
+
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    color: var(--navy);
+
+    margin: 25px 0;
+}
+
+
+.event-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+
+.event-chips span,
+.card-tag {
+    padding: 7px 10px;
+
+    background: #e9edf0;
+
+    font-size: .68rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+
+/* =========================================================
+   4. WEBINAR
+   ========================================================= */
+
+.gbn {
+    background: var(--navy);
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.gbn-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+
+    gap: 80px;
+    margin-top: 70px;
+}
+
+
+/* -----------------------------------------
+   CABECERA DE SECCIÓN
+   ----------------------------------------- */
+
+.gbn .section-heading h2,
+.gbn .section-heading p {
+    color: white;
+}
+
+
+/* -----------------------------------------
+   PANTALLA WEBINAR
+   ----------------------------------------- */
+
+.gbn-screen {
+    background: #0e2a47;
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    padding: 24px;
+}
+
+
+.screen-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: .72rem;
+    color: #8fa2b3;
+
+    margin-bottom: 40px;
+}
+
+
+.screen-top span:first-child {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+
+/* -----------------------------------------
+   CATEGORÍAS WEBINAR
+   ----------------------------------------- */
+
+.tiers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+
+.tier {
+    background: transparent;
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, .13);
+
+    padding: 18px 10px;
+
+    text-align: left;
+
+    transition: .2s;
+
+    cursor: pointer;
+}
+
+
+.tier.active {
+    background: var(--accent);
+    color: var(--navy);
+}
+
+
+.tier b {
+    display: block;
+
+    font-size: .6rem;
+
+    margin-bottom: 20px;
+}
+
+
+.tier span {
+    display: block;
+
+    font-weight: 800;
+    font-size: .78rem;
+}
+
+
+.tier i {
+    display: block;
+
+    height: 4px;
+
+    background: currentColor;
+    opacity: .5;
+
+    margin-top: 20px;
+}
+
+
+/* -----------------------------------------
+   INFORMACIÓN WEBINAR
+   ----------------------------------------- */
+
+.tier-info {
+    padding: 30px 0 8px;
+
+    font-size: .9rem;
+    color: #aab8c4;
+
+    min-height: 70px;
+}
+
+
+.gbn-number {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    margin-top: 20px;
+}
+
+
+.gbn-number strong {
+    font: 800 4rem var(--font-display);
+    color: var(--accent);
+}
+
+
+.gbn-number span {
+    font-size: .8rem;
+    color: #aab8c4;
+    max-width: 300px;
+}
+
+
+/* -----------------------------------------
+   CONTENIDO WEBINAR
+   ----------------------------------------- */
+
+.method h3 {
+    color: white;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 25px;
+}
+
+
+.step {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+
+    gap: 18px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+
+.step > b {
+    color: var(--accent);
+    font-size: .7rem;
+}
+
+
+.step strong {
+    font-size: .9rem;
+}
+
+
+.step p {
+    font-size: .78rem;
+
+    color: #9aabb9;
+
+    margin: 5px 0 0;
+
+    line-height: 1.5;
+}
+
+
+.method .btn {
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   5. EVENTOS
+   ========================================================= */
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+
+.filter {
+    border: 1px solid var(--line);
+    background: white;
+
+    padding: 10px 15px;
+
+    font-size: .75rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.filter.active,
+.filter:hover {
+    background: var(--navy);
+    color: white;
+}
+
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+.event-card {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    padding: 30px;
+
+    min-height: 290px;
+
+    transition: .25s;
+}
+
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+
+.event-card-date {
+    display: flex;
+    gap: 10px;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.event-card-date b {
+    font: 800 2.2rem var(--font-display);
+    color: var(--navy);
+}
+
+
+.event-card-date span {
+    font-size: .6rem;
+    font-weight: 800;
+    color: var(--muted);
+}
+
+
+.event-card h3 {
+    font-size: 1.25rem;
+    margin: 16px 0 10px;
+}
+
+
+.event-card p {
+    font-size: .82rem;
+}
+
+
+.event-card a,
+.news-card a {
+    font-size: .75rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   6. FORMACIÓN
+   ========================================================= */
+
+/*
+   La sección de Formación reutiliza .gbn para mantener
+   el fondo azul corporativo.
+*/
+
+.formation-section {
+    background: var(--navy);
+    color: white;
+}
+
+
+/* Cabecera */
+
+.formation-section .section-heading h2 {
+    color: white;
+}
+
+
+.formation-section .section-heading p {
+    color: #aab8c4;
+    max-width: 480px;
+}
+
+
+/* Grid */
+
+.formation-grid {
+    margin-top: 60px;
+}
+
+
+/* Tarjetas */
+
+.service-card-dark {
+    background: #0e2a47;
+    color: white;
+
+    border-color: rgba(255, 255, 255, .12);
+}
+
+
+.service-card-dark h3 {
+    color: white;
+}
+
+
+.service-card-dark p {
+    color: #aab8c4;
+}
+
+
+.service-card-dark .service-label {
+    color: #8fa2b3;
+}
+
+
+/* Hover */
+
+.service-card-dark:hover {
+    background: var(--accent);
+    color: var(--navy);
+}
+
+
+.service-card-dark:hover h3,
+.service-card-dark:hover p {
+    color: var(--navy);
+}
+
+
+.service-card-dark:hover .service-label,
+.service-card-dark:hover .service-number {
+    color: var(--navy);
+}
+
+
+/* -----------------------------------------
+   TARJETAS DE SERVICIO
+   ----------------------------------------- */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    border-left: 1px solid rgba(255, 255, 255, .12);
+}
+
+
+.service-card {
+    position: relative;
+
+    padding: 35px 28px 40px;
+
+    border-right: 1px solid rgba(255, 255, 255, .12);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+
+    min-height: 290px;
+
+    transition:
+        .3s;
+}
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+
+.service-number {
+    font-size: .65rem;
+    color: #95a2ad;
+}
+
+
+.service-label {
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+
+.service-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.service-icon {
+    font-size: 2rem;
+    margin: 45px 0 25px;
+}
+
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+.service-card p {
+    font-size: .82rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   7. REVISTA
+   =========================================================
+   Se mantiene por compatibilidad con otras páginas.
+   No afecta al HTML principal actual.
+   ========================================================= */
+
+.revista {
+    background: var(--navy);
+}
+
+
+.revista-layout {
+    color: white;
+}
+
+
+.magazine {
+    display: grid;
+    place-items: center;
+
+    min-height: 500px;
+
+    background: linear-gradient(
+        145deg,
+        #172f48,
+        #09182a
+    );
+}
+
+
+.magazine-cover {
+    width: 280px;
+    height: 390px;
+
+    background: var(--accent);
+    color: var(--navy);
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 20px 25px 50px rgba(0, 0, 0, .35);
+
+    transform: rotate(-3deg);
+}
+
+
+.magazine-cover span {
+    font: 800 1rem var(--font-display);
+}
+
+
+.magazine-cover strong {
+    font: 800 2.3rem/1 var(--font-display);
+    letter-spacing: -.05em;
+}
+
+
+.magazine-cover small {
+    font-weight: 800;
+}
+
+
+.revista h2 {
+    color: white;
+}
+
+
+.revista p {
+    color: #aab8c4;
+}
+
+
+/* =========================================================
+   8. NOTICIAS
+   ========================================================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.news-card {
+    border: 1px solid var(--line);
+
+    background: white;
+
+    overflow: hidden;
+}
+
+
+.news-card img {
+    height: 220px;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+
+.news-body {
+    padding: 25px;
+}
+
+
+.news-body > span {
+    font-size: .65rem;
+    font-weight: 800;
+    color: #708091;
+}
+
+
+.news-body h3 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+
+.news-body p {
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   9. CONTACTO
+   ========================================================= */
+
+.contact-section {
+    background: var(--navy);
+    padding: 100px 0;
+}
+
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: .85fr 1.15fr;
+
+    gap: 100px;
+}
+
+
+.contact-copy h2 {
+    color: white;
+}
+
+
+.contact-copy p {
+    color: #aab8c4;
+    max-width: 450px;
+}
+
+
+.contact-detail {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 45px;
+
+    color: white;
+}
+
+
+.contact-detail b {
+    display: block;
+
+    font-size: .75rem;
+    color: #8193a3;
+
+    margin-bottom: 4px;
+}
+
+
+.contact-detail a {
+    font-size: .85rem;
+}
+
+
+.checkbox {
+    display: flex !important;
+    flex-direction: row !important;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: .75rem !important;
+    color: #9ba9b5;
+}
+
+
+.checkbox input {
+    width: auto !important;
+}
+
+
+.form-message {
+    font-size: .8rem;
+
+    color: var(--accent);
+
+    margin: 10px 0 0;
+}

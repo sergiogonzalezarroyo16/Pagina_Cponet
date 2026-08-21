@@ -1,0 +1,302 @@
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: .3s;
+  background: transparent;
+  color: white;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, .96);
+  color: var(--navy);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+  backdrop-filter: blur(12px);
+}
+
+.nav-wrap {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+
+/* =========================================
+   LOGO + REDES
+   ========================================= */
+
+.brand-social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--navy);
+  font: 800 .9rem var(--font-display);
+  border-radius: 50%;
+}
+
+.brand-name {
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   REDES SOCIALES
+   ========================================= */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.social-links a {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 50%;
+  color: white;
+  transition: .25s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.social-links svg rect,
+.social-links svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.social-links svg circle:last-child {
+  fill: currentColor;
+  stroke: none;
+}
+
+
+/* =========================================
+   CUANDO EL HEADER HACE SCROLL
+   ========================================= */
+
+.site-header.is-scrolled .social-links a {
+  border-color: rgba(4, 18, 34, .2);
+  color: var(--navy);
+}
+
+.site-header.is-scrolled .social-links a:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--navy);
+}
+
+
+/* =========================================
+   NAVEGACIÓN DESKTOP
+   ========================================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-size: .82rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.desktop-nav > a {
+  position: relative;
+  color: inherit;
+  transition: .25s ease;
+  white-space: nowrap;
+}
+
+.desktop-nav > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: .25s ease;
+}
+
+.desktop-nav > a:hover {
+  color: var(--accent);
+}
+
+.desktop-nav > a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   BOTONES DEL HEADER
+   ========================================= */
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.site-header:not(.is-scrolled) .btn-outline {
+  border-color: rgba(255, 255, 255, .5);
+  color: white;
+}
+
+
+/* =========================================
+   MENÚ MÓVIL
+   ========================================= */
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px auto;
+  background: currentColor;
+  transition: .25s ease;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+  .desktop-nav {
+    gap: 18px;
+    font-size: .78rem;
+  }
+
+  .brand-social {
+    gap: 15px;
+  }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .social-links a {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-wrap {
+    gap: 15px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .desktop-nav,
+  .nav-actions {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .brand-social {
+    margin-right: auto;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: var(--navy);
+    padding: 15px 25px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+  }
+
+  .mobile-nav.is-open {
+    display: block;
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(4, 18, 34, .08);
+    font-weight: 700;
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+
+/* =========================================
+   ANIMACIÓN DEL MENÚ HAMBURGUESA
+   ========================================= */
+
+.nav-toggle.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

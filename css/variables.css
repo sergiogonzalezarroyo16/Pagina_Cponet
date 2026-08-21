@@ -1,0 +1,7 @@
+:root{
+  --navy:#071b33;--navy-2:#0d2b4a;--ink:#17212d;--muted:#667383;
+  --cream:#f5f2eb;--white:#fff;--accent:#d8f36a;--accent-2:#b9db4d;
+  --line:#dfe3e7;--container:1180px;--radius:2px;
+  --shadow:0 18px 50px rgba(7,27,51,.12);
+  --font-body:"DM Sans",Arial,sans-serif;--font-display:"Manrope",Arial,sans-serif;
+}

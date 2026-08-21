@@ -1,0 +1,5 @@
+.news-card,
+.event-card,
+.service-card {
+    will-change: transform
+}

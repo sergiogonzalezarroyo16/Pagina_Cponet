@@ -1,0 +1,1047 @@
+/* =========================================================
+   FORMACIÓN · GRUPO CPONET
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONTENIDO GENERAL DE FORMACIÓN
+   ========================================================= */
+
+/*
+ * Espaciado vertical general de la página.
+ * Evita que los diferentes apartados queden demasiado juntos.
+ */
+
+.content-page {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   2. INTRODUCCIÓN
+   ========================================================= */
+
+.content-page > .container > .eyebrow:first-child {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.content-page > .container > h2:first-of-type {
+    margin-bottom: 24px;
+}
+
+.content-page > .container > h2:first-of-type + p {
+    margin-bottom: 18px;
+}
+
+
+/*
+ * Último párrafo de la introducción.
+ * Lo separamos de las primeras tarjetas.
+ */
+
+.content-page > .container > h2:first-of-type + p + p {
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   3. TARJETAS DE PROGRAMAS DESTACADOS
+   ========================================================= */
+
+/*
+ * Las tres tarjetas iniciales.
+ */
+
+.content-page > .container > .simple-grid:first-of-type {
+    margin-bottom: 100px;
+}
+
+
+/*
+ * Mejoramos ligeramente el comportamiento
+ * de las tarjetas.
+ */
+
+.simple-card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   4. BLOQUES DE FORMACIÓN
+   ========================================================= */
+
+/*
+ * Separación vertical entre:
+ *
+ * PROGRAMAS
+ * OBJETIVO
+ *
+ * y cualquier otro bloque que pueda añadirse
+ * posteriormente.
+ */
+
+.formacion-block {
+    margin-top: 100px;
+}
+
+
+/*
+ * El primer bloque de formación no necesita
+ * una separación tan grande si viene después
+ * de las tarjetas.
+ */
+
+.content-page > .container > .simple-grid + .formacion-block {
+    margin-top: 0;
+}
+
+
+/*
+ * Separación entre el título del bloque
+ * y las tarjetas.
+ */
+
+.formacion-block .eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.formacion-block h2 {
+    margin-bottom: 40px;
+}
+
+
+/*
+ * Separación inferior del grid de áreas
+ * para que OBJETIVO quede claramente separado.
+ */
+
+.formacion-block .simple-grid {
+    margin-bottom: 0;
+}
+
+
+/*
+ * El bloque de OBJETIVO queda bastante
+ * separado del apartado PROGRAMAS.
+ */
+
+.formacion-block + .formacion-block {
+    margin-top: 110px;
+}
+
+
+/* =========================================================
+   5. GRID DE ÁREAS DE CONOCIMIENTO
+   ========================================================= */
+
+/*
+ * Mantenemos el grid de simple-card,
+ * pero damos un poco más de aire entre tarjetas.
+ */
+
+.formacion-block .simple-grid {
+    row-gap: 28px;
+}
+
+
+/*
+ * Las tarjetas mantienen una altura coherente.
+ */
+
+.formacion-block .simple-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/* =========================================================
+   6. OBJETIVO
+   ========================================================= */
+
+/*
+ * El apartado objetivo tendrá más presencia
+ * visual y separación respecto al bloque anterior.
+ */
+
+.formacion-block:last-of-type {
+    padding-top: 10px;
+}
+
+
+.formacion-block:last-of-type h2 {
+    margin-bottom: 22px;
+}
+
+
+.formacion-block:last-of-type p {
+    max-width: 850px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   7. PONENTES · SECCIÓN GENERAL
+   ========================================================= */
+
+.webinar-speakers-section {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 0;
+
+    padding: 85px 0 95px;
+
+    /*
+     * Fondo integrado con la página.
+     */
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5f7f9 0%,
+            #eef2f5 50%,
+            #f5f7f9 100%
+        );
+
+    border-top: 1px solid rgba(4, 18, 34, 0.06);
+
+    border-bottom: 1px solid rgba(4, 18, 34, 0.06);
+}
+
+
+/* Línea decorativa superior */
+
+.webinar-speakers-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 70px;
+
+    height: 3px;
+
+    transform: translateX(-50%);
+
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   8. CONTENEDOR DE PONENTES
+   ========================================================= */
+
+.webinar-speakers {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   9. CABECERA DE PONENTES
+   ========================================================= */
+
+.webinar-speakers .webinar-section-header {
+
+    max-width: 850px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+
+.webinar-speakers .webinar-section-header .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--accent);
+}
+
+
+.webinar-speakers .webinar-section-header h2 {
+
+    margin: 0 0 18px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+
+.webinar-speakers .webinar-section-header p {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #536575;
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. TARJETA DEL PONENTE
+   ========================================================= */
+
+.speaker-featured {
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    width: 100%;
+
+    min-height: 450px;
+
+    margin: 0 0 30px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid rgba(4, 18, 34, 0.07);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 12px 35px rgba(4, 18, 34, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.speaker-featured:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 45px rgba(4, 18, 34, 0.09);
+}
+
+
+/* =========================================================
+   11. SEGUNDO PONENTE · FOTO DERECHA
+   ========================================================= */
+
+.speaker-featured-reverse {
+
+    grid-template-columns: 58% 42%;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   12. IMAGEN DEL PONENTE
+   ========================================================= */
+
+.speaker-featured-image {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 450px;
+
+    overflow: hidden;
+
+    background: var(--navy);
+}
+
+
+.speaker-featured-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* Zoom suave */
+
+.speaker-featured:hover .speaker-featured-image img {
+
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   13. INFORMACIÓN DEL PONENTE
+   ========================================================= */
+
+.speaker-featured-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 55px 60px;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   14. ETIQUETA PONENTE
+   ========================================================= */
+
+.speaker-role {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   15. NOMBRE
+   ========================================================= */
+
+.speaker-featured-info h3 {
+
+    margin: 0 0 9px;
+
+    color: var(--navy);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   16. CARGO
+   ========================================================= */
+
+.speaker-position {
+
+    margin: 0 0 20px;
+
+    color: #718292;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   17. BIOGRAFÍA
+   ========================================================= */
+
+.speaker-bio {
+
+    max-width: 620px;
+
+    margin: 0 0 25px;
+
+    color: #536575;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   18. LINKEDIN
+   ========================================================= */
+
+.speaker-linkedin {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    color: var(--navy);
+
+    background: transparent;
+
+    border: 1px solid rgba(4, 18, 34, 0.14);
+
+    border-radius: 4px;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Hover LinkedIn */
+
+.speaker-linkedin:hover {
+
+    transform: translateY(-2px);
+
+    background: var(--navy);
+
+    color: #fff;
+
+    border-color: var(--navy);
+}
+
+
+/* =========================================================
+   19. ICONO LINKEDIN
+   ========================================================= */
+
+.linkedin-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 22px;
+
+    height: 22px;
+
+    background: var(--navy);
+
+    color: #fff;
+
+    border-radius: 3px;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+    transition:
+        background 0.25s ease;
+}
+
+
+/* Icono al hacer hover */
+
+.speaker-linkedin:hover .linkedin-icon {
+
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   20. ANCHO DE LA SECCIÓN DE PONENTES
+   ========================================================= */
+
+.content-page > .container > .webinar-speakers-section {
+
+    width: 100vw;
+
+    margin-left: calc(50% - 50vw);
+
+    margin-right: calc(50% - 50vw);
+}
+
+
+.content-page > .container > .webinar-speakers-section
+.webinar-speakers {
+
+    width: min(100% - 40px, 1200px);
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   21. BOTÓN VOLVER
+   ========================================================= */
+
+.formacion-back {
+
+    margin-top: 55px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   22. TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .content-page {
+
+        padding-top: 65px;
+
+        padding-bottom: 80px;
+    }
+
+
+    .content-page > .container > .simple-grid:first-of-type {
+
+        margin-bottom: 80px;
+    }
+
+
+    .formacion-block {
+
+        margin-top: 80px;
+    }
+
+
+    .formacion-block + .formacion-block {
+
+        margin-top: 90px;
+    }
+
+
+    .webinar-speakers-section {
+
+        padding: 70px 0 80px;
+    }
+
+
+    .speaker-featured {
+
+        grid-template-columns: 40% 60%;
+
+        min-height: 400px;
+    }
+
+
+    .speaker-featured-reverse {
+
+        grid-template-columns: 60% 40%;
+    }
+
+
+    .speaker-featured-image {
+
+        min-height: 400px;
+    }
+
+
+    .speaker-featured-info {
+
+        padding: 45px;
+    }
+
+
+    .speaker-featured-info h3 {
+
+        font-size: 2.2rem;
+    }
+
+}
+
+
+/* =========================================================
+   23. TABLET PEQUEÑA
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .content-page {
+
+        padding-top: 55px;
+
+        padding-bottom: 70px;
+    }
+
+
+    .content-page > .container > .simple-grid:first-of-type {
+
+        margin-bottom: 70px;
+    }
+
+
+    .formacion-block {
+
+        margin-top: 70px;
+    }
+
+
+    .formacion-block + .formacion-block {
+
+        margin-top: 80px;
+    }
+
+
+    .formacion-block h2 {
+
+        margin-bottom: 30px;
+    }
+
+
+    .webinar-speakers-section {
+
+        padding: 65px 0 70px;
+    }
+
+
+    .webinar-speakers .webinar-section-header {
+
+        margin-bottom: 35px;
+    }
+
+
+    /*
+     * Las tarjetas pasan a una columna.
+     */
+
+    .speaker-featured,
+    .speaker-featured-reverse {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+
+    /*
+     * En el segundo ponente la imagen aparece primero.
+     */
+
+    .speaker-featured-reverse .speaker-featured-image {
+
+        order: -1;
+    }
+
+
+    .speaker-featured-image {
+
+        width: 100%;
+
+        height: 380px;
+
+        min-height: 380px;
+    }
+
+
+    .speaker-featured-info {
+
+        padding: 40px;
+    }
+
+
+    .speaker-featured-info h3 {
+
+        font-size: 2.25rem;
+    }
+
+
+    .speaker-bio {
+
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   24. MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .content-page {
+
+        padding-top: 45px;
+
+        padding-bottom: 60px;
+    }
+
+
+    .content-page > .container > .simple-grid:first-of-type {
+
+        margin-bottom: 60px;
+    }
+
+
+    .formacion-block {
+
+        margin-top: 60px;
+    }
+
+
+    .formacion-block + .formacion-block {
+
+        margin-top: 70px;
+    }
+
+
+    .formacion-block h2 {
+
+        margin-bottom: 25px;
+    }
+
+
+    .formacion-block .simple-grid {
+
+        row-gap: 20px;
+    }
+
+
+    .webinar-speakers-section {
+
+        padding: 55px 0 60px;
+    }
+
+
+    .webinar-speakers-section::before {
+
+        width: 55px;
+    }
+
+
+    .webinar-speakers .webinar-section-header {
+
+        margin-bottom: 30px;
+
+        text-align: left;
+    }
+
+
+    .webinar-speakers .webinar-section-header h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .webinar-speakers .webinar-section-header p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+
+    .speaker-featured {
+
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+    }
+
+
+    .speaker-featured-reverse {
+
+        margin-top: 20px;
+    }
+
+
+    .speaker-featured-image {
+
+        height: 330px;
+
+        min-height: 330px;
+    }
+
+
+    .speaker-featured-info {
+
+        padding: 32px 25px;
+    }
+
+
+    .speaker-featured-info h3 {
+
+        font-size: 2rem;
+    }
+
+
+    .speaker-position {
+
+        margin-bottom: 18px;
+    }
+
+
+    .speaker-bio {
+
+        margin-bottom: 22px;
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+
+    .speaker-linkedin {
+
+        padding: 9px 13px;
+
+        font-size: 0.76rem;
+    }
+
+
+    .formacion-back {
+
+        margin-top: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   25. MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .content-page {
+
+        padding-top: 40px;
+
+        padding-bottom: 50px;
+    }
+
+
+    .content-page > .container > .simple-grid:first-of-type {
+
+        margin-bottom: 50px;
+    }
+
+
+    .formacion-block {
+
+        margin-top: 50px;
+    }
+
+
+    .formacion-block + .formacion-block {
+
+        margin-top: 60px;
+    }
+
+
+    .webinar-speakers-section {
+
+        padding: 45px 0 50px;
+    }
+
+
+    .webinar-speakers .webinar-section-header h2 {
+
+        font-size: 1.8rem;
+    }
+
+
+    .speaker-featured-image {
+
+        height: 300px;
+
+        min-height: 300px;
+    }
+
+
+    .speaker-featured-info {
+
+        padding: 28px 22px;
+    }
+
+
+    .speaker-featured-info h3 {
+
+        font-size: 1.8rem;
+    }
+
+
+    .speaker-bio {
+
+        font-size: 0.88rem;
+    }
+
+}
+
+
+/* =========================================================
+   26. ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .speaker-featured,
+    .speaker-featured-image img,
+    .speaker-linkedin {
+
+        transition: none;
+    }
+
+
+    .speaker-featured:hover {
+
+        transform: none;
+    }
+
+
+    .speaker-featured:hover .speaker-featured-image img {
+
+        transform: none;
+    }
+
+}
