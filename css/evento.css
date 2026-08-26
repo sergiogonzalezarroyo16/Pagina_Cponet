@@ -1,17 +1,385 @@
 /* =========================================================
    EVENTO.CSS
-   EVENTOS / MASTERCLASS CPONET
+   EVENTOS / MASTERCLASS / DETALLE DE EVENTOS CPONET
+
+   Mantiene la identidad visual general de CPOnet y
+   el estilo utilizado en WEBINARS.
    ========================================================= */
 
 
 /* =========================================================
-   1. ESTRUCTURA GENERAL
+   1. HERO
    ========================================================= */
 
-/*
-   Separación VERTICAL entre los diferentes apartados.
-   No afecta a la distribución horizontal de los contenidos.
-*/
+.inner-hero {
+    position: relative;
+    overflow: hidden;
+
+    background:var(--navy);
+}
+
+.inner-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.inner-hero h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.inner-hero p {
+    max-width: 700px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   2. CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.content-page {
+    background: #ffffff;
+}
+
+.content-page > .container > .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.content-page > .container > h2 {
+    max-width: 900px;
+    margin-bottom: 22px;
+}
+
+.content-page > .container > p {
+    max-width: 850px;
+    margin-bottom: 0;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   3. SECCIONES DE EVENTOS
+   ========================================================= */
+
+.events-list-section,
+.events-types-section {
+    margin-top: 90px;
+}
+
+.events-list-section > .eyebrow,
+.events-types-section > .eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.events-list-section > h2,
+.events-types-section > h2 {
+    margin-bottom: 18px;
+}
+
+.events-list-section > p,
+.events-types-section > p {
+    max-width: 800px;
+    margin-bottom: 40px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   4. GRID DE EVENTOS
+   ========================================================= */
+
+.events-list-section .simple-grid,
+.events-types-section .simple-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   5. TARJETAS DE EVENTOS
+   ========================================================= */
+
+.events-list-section .simple-card,
+.events-types-section .simple-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(4, 18, 34, 0.08);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(4, 18, 34, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Línea superior */
+
+.events-list-section .simple-card::before,
+.events-types-section .simple-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--accent);
+
+    border-radius: 12px 12px 0 0;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.events-list-section .simple-card:hover,
+.events-types-section .simple-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(7, 125, 243, 0.18);
+
+    box-shadow:
+        0 18px 40px rgba(4, 18, 34, 0.10);
+}
+
+.events-list-section .simple-card:hover::before,
+.events-types-section .simple-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   6. FECHA / EYEBROW DE EVENTO
+   ========================================================= */
+
+.events-list-section .simple-card > .eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   7. TÍTULOS DE TARJETAS
+   ========================================================= */
+
+.events-list-section .simple-card h3,
+.events-types-section .simple-card h3 {
+    margin-bottom: 15px;
+
+    color: var(--navy);
+
+    font-size: 1.35rem;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   8. TEXTOS DE TARJETAS
+   ========================================================= */
+
+.events-list-section .simple-card p,
+.events-types-section .simple-card p {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    line-height: 1.75;
+}
+
+.events-list-section .simple-card p:last-of-type {
+    margin-bottom: 25px;
+}
+
+.events-list-section .simple-card p strong {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   9. BOTONES
+   ========================================================= */
+
+.events-list-section .simple-card .btn,
+.events-types-section .simple-card .btn {
+    align-self: flex-start;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 45px;
+
+    margin-top: auto;
+
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.events-list-section .simple-card .btn:hover,
+.events-types-section .simple-card .btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(7, 125, 243, 0.20);
+}
+
+
+/* =========================================================
+   10. TIPOS DE EVENTOS
+   ========================================================= */
+
+.events-types-section {
+    padding-top: 20px;
+}
+
+.events-types-section .simple-card {
+    min-height: 280px;
+}
+
+.events-types-section .simple-card h3 {
+    font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   11. SECCIÓN FINAL
+   ========================================================= */
+
+.content-page .container > section:last-of-type {
+    margin-top: 90px !important;
+
+    padding: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7f9 0%,
+            #ffffff 100%
+        );
+
+    border: 1px solid rgba(4, 18, 34, 0.07);
+
+    border-radius: 12px;
+}
+
+.content-page .container > section:last-of-type .eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.content-page .container > section:last-of-type h2 {
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.content-page .container > section:last-of-type p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   12. ENLACE VOLVER
+   ========================================================= */
+
+.content-page .back {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 45px;
+
+    color: var(--navy);
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.content-page .back:hover {
+    color: var(--accent);
+
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   13. DETALLE DEL EVENTO
+   ========================================================= */
 
 .event-detail-section,
 .webinar-speakers-section,
@@ -19,18 +387,6 @@
 .event-cta {
     margin-bottom: 110px;
 }
-
-
-/* Evita margen innecesario en el último apartado */
-
-.content-page .container > section:last-of-type {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   2. APARTADOS DE CONTENIDO
-   ========================================================= */
 
 .event-detail-section {
     width: 100%;
@@ -47,7 +403,9 @@
 
 .event-detail-section > p {
     max-width: 850px;
+
     margin-bottom: 18px;
+
     line-height: 1.8;
 }
 
@@ -57,16 +415,12 @@
 
 
 /* =========================================================
-   3. INFORMACIÓN PRINCIPAL DEL EVENTO
+   14. INFORMACIÓN PRINCIPAL DEL EVENTO
    ========================================================= */
 
 .event-info-grid {
     display: grid;
 
-    /*
-       2 columnas = 2 tarjetas arriba
-       + 2 tarjetas abajo
-    */
     grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
@@ -74,17 +428,14 @@
     margin-top: 40px;
 }
 
-
-/* =========================================================
-   4. TARJETAS DE INFORMACIÓN
-   ========================================================= */
-
 .event-info-grid .simple-card {
-    min-height: 180px;
-
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
+    min-height: 180px;
 
     padding: 30px;
 
@@ -99,7 +450,6 @@
         box-shadow 0.3s ease;
 }
 
-
 .event-info-grid .simple-card:hover {
     transform: translateY(-4px);
 
@@ -107,14 +457,13 @@
         0 12px 30px rgba(4, 18, 34, 0.08);
 }
 
-
 .event-info-grid .simple-card h3 {
     margin-bottom: 12px;
 
-    font-size: 1.15rem;
     color: var(--navy);
-}
 
+    font-size: 1.15rem;
+}
 
 .event-info-grid .simple-card p {
     margin: 0;
@@ -126,13 +475,8 @@
 
 
 /* =========================================================
-   5. GRID DE CONTENIDO
+   15. GRID DE CONTENIDO DEL EVENTO
    ========================================================= */
-
-/*
-   El resto de grids que utilice la página
-   mantiene tres columnas.
-*/
 
 .event-detail-section .simple-grid:not(.event-info-grid) {
     display: grid;
@@ -143,11 +487,6 @@
 
     margin-top: 40px;
 }
-
-
-/* =========================================================
-   6. TARJETAS GENERALES
-   ========================================================= */
 
 .event-detail-section .simple-grid:not(.event-info-grid) .simple-card {
     min-height: 210px;
@@ -165,14 +504,12 @@
         box-shadow 0.3s ease;
 }
 
-
 .event-detail-section .simple-grid:not(.event-info-grid) .simple-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
         0 15px 35px rgba(4, 18, 34, 0.08);
 }
-
 
 .event-detail-section .simple-grid:not(.event-info-grid) .simple-card h3 {
     margin-bottom: 12px;
@@ -181,7 +518,6 @@
 
     font-size: 1.1rem;
 }
-
 
 .event-detail-section .simple-grid:not(.event-info-grid) .simple-card p {
     margin: 0;
@@ -193,12 +529,8 @@
 
 
 /* =========================================================
-   7. PONENTES
+   16. PONENTES
    ========================================================= */
-
-/*
-   Apartado visualmente diferenciado del resto.
-*/
 
 .webinar-speakers-section {
     width: 100%;
@@ -213,14 +545,13 @@
     border-radius: 12px;
 }
 
-
 .webinar-speakers {
     width: 100%;
 }
 
 
 /* =========================================================
-   8. CABECERA PONENTES
+   17. CABECERA DE PONENTES
    ========================================================= */
 
 .webinar-section-header {
@@ -229,18 +560,14 @@
     margin: 0 auto 50px;
 }
 
-
 .webinar-section-header .eyebrow {
     display: inline-block;
-
     margin-bottom: 18px;
 }
-
 
 .webinar-section-header h2 {
     margin-bottom: 18px;
 }
-
 
 .webinar-section-header p {
     max-width: 750px;
@@ -252,7 +579,7 @@
 
 
 /* =========================================================
-   9. TARJETA DESTACADA DE PONENTE
+   18. PONENTE DESTACADO
    ========================================================= */
 
 .speaker-featured {
@@ -261,6 +588,8 @@
     grid-template-columns: 0.85fr 1.15fr;
 
     min-height: 430px;
+
+    margin-bottom: 35px;
 
     background: #ffffff;
 
@@ -273,13 +602,10 @@
     box-shadow:
         0 15px 40px rgba(4, 18, 34, 0.07);
 
-    margin-bottom: 35px;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
-
 
 .speaker-featured:hover {
     transform: translateY(-5px);
@@ -290,7 +616,7 @@
 
 
 /* =========================================================
-   10. FOTO DEL PONENTE
+   19. FOTO DEL PONENTE
    ========================================================= */
 
 .speaker-featured-image {
@@ -300,7 +626,6 @@
 
     background: #e9eef3;
 }
-
 
 .speaker-featured-image img {
     display: block;
@@ -315,14 +640,13 @@
     transition: transform 0.5s ease;
 }
 
-
 .speaker-featured:hover .speaker-featured-image img {
     transform: scale(1.03);
 }
 
 
 /* =========================================================
-   11. INFORMACIÓN DEL PONENTE
+   20. INFORMACIÓN DEL PONENTE
    ========================================================= */
 
 .speaker-featured-info {
@@ -334,7 +658,6 @@
 
     padding: 55px;
 }
-
 
 .speaker-featured-info .speaker-role {
     display: inline-block;
@@ -350,7 +673,6 @@
     letter-spacing: 0.12em;
 }
 
-
 .speaker-featured-info h3 {
     margin-bottom: 10px;
 
@@ -360,7 +682,6 @@
 
     line-height: 1.2;
 }
-
 
 .speaker-position {
     margin-bottom: 22px;
@@ -374,7 +695,6 @@
     line-height: 1.5;
 }
 
-
 .speaker-bio {
     margin-bottom: 25px;
 
@@ -385,7 +705,7 @@
 
 
 /* =========================================================
-   12. LINKEDIN PONENTE
+   21. LINKEDIN DEL PONENTE
    ========================================================= */
 
 .speaker-linkedin {
@@ -417,7 +737,6 @@
         transform 0.25s ease;
 }
 
-
 .speaker-linkedin:hover {
     background: rgba(7, 125, 243, 0.08);
 
@@ -425,7 +744,6 @@
 
     transform: translateY(-2px);
 }
-
 
 .linkedin-icon {
     display: grid;
@@ -446,7 +764,6 @@
     font-weight: 800;
 }
 
-
 .speaker-linkedin-arrow {
     margin-left: 4px;
 
@@ -455,23 +772,16 @@
 
 
 /* =========================================================
-   13. PONENTE REVERSE
+   22. PONENTE INVERTIDO
    ========================================================= */
-
-/*
-   Segundo ponente:
-   información izquierda + foto derecha.
-*/
 
 .speaker-featured-reverse {
     grid-template-columns: 1.15fr 0.85fr;
 }
 
-
 .speaker-featured-reverse .speaker-featured-info {
     order: 1;
 }
-
 
 .speaker-featured-reverse .speaker-featured-image {
     order: 2;
@@ -479,13 +789,12 @@
 
 
 /* =========================================================
-   14. UBICACIÓN
+   23. UBICACIÓN
    ========================================================= */
 
 .convention-location {
     width: 100%;
 }
-
 
 .convention-location-header {
     max-width: 800px;
@@ -493,18 +802,14 @@
     margin-bottom: 45px;
 }
 
-
 .convention-location-header .eyebrow {
     display: inline-block;
-
     margin-bottom: 18px;
 }
-
 
 .convention-location-header h2 {
     margin-bottom: 15px;
 }
-
 
 .convention-location-header p {
     max-width: 700px;
@@ -516,7 +821,7 @@
 
 
 /* =========================================================
-   15. GRID UBICACIÓN
+   24. GRID DE UBICACIÓN
    ========================================================= */
 
 .convention-location-grid {
@@ -531,7 +836,7 @@
 
 
 /* =========================================================
-   16. INFORMACIÓN UBICACIÓN
+   25. INFORMACIÓN DE UBICACIÓN
    ========================================================= */
 
 .convention-location-info {
@@ -541,7 +846,6 @@
 
     justify-content: center;
 }
-
 
 .location-label {
     display: block;
@@ -557,11 +861,9 @@
     letter-spacing: 0.1em;
 }
 
-
 .convention-location-info h3 {
     margin-bottom: 15px;
 }
-
 
 .location-address {
     margin-bottom: 30px;
@@ -573,7 +875,7 @@
 
 
 /* =========================================================
-   17. DETALLES UBICACIÓN
+   26. DETALLES DE UBICACIÓN
    ========================================================= */
 
 .location-details {
@@ -586,7 +888,6 @@
     margin-bottom: 30px;
 }
 
-
 .location-detail {
     display: flex;
 
@@ -595,16 +896,15 @@
     gap: 15px;
 }
 
-
 .location-detail-icon {
+    display: grid;
+
+    place-items: center;
+
     width: 40px;
     height: 40px;
 
     flex-shrink: 0;
-
-    display: grid;
-
-    place-items: center;
 
     background: rgba(7, 125, 243, 0.08);
 
@@ -613,13 +913,11 @@
     font-size: 1rem;
 }
 
-
 .location-detail strong {
     display: block;
 
     margin-bottom: 4px;
 }
-
 
 .location-detail p {
     margin: 0;
@@ -631,7 +929,7 @@
 
 
 /* =========================================================
-   18. BOTÓN UBICACIÓN
+   27. BOTÓN DE UBICACIÓN
    ========================================================= */
 
 .convention-location-button {
@@ -646,7 +944,7 @@
 
 
 /* =========================================================
-   19. MAPA
+   28. MAPA
    ========================================================= */
 
 .convention-location-map {
@@ -661,7 +959,6 @@
     background: #eef2f5;
 }
 
-
 .convention-location-map iframe {
     display: block;
 
@@ -675,7 +972,7 @@
 
 
 /* =========================================================
-   20. CTA FINAL
+   29. CTA FINAL
    ========================================================= */
 
 .event-cta {
@@ -688,31 +985,17 @@
     border-radius: 12px;
 }
 
-
 .event-cta .eyebrow {
     display: inline-block;
-
     margin-bottom: 18px;
 }
-
 
 .event-cta h2 {
     max-width: 800px;
 
     margin: 0 auto 20px;
 
-    color: #ffffff;
-}
-
-
-.event-cta p {
-    max-width: 700px;
-
-    margin: 0 auto 12px;
-
-    color: rgba(255, 255, 255, 0.78);
-
-    line-height: 1.8;
+    color: var(--navy);
 }
 
 
@@ -722,22 +1005,7 @@
 
 
 /* =========================================================
-   21. VOLVER
-   ========================================================= */
-
-.back {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    font-weight: 800;
-
-    text-decoration: none;
-}
-
-
-/* =========================================================
-   22. TABLET
+   30. TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -749,45 +1017,30 @@
         margin-bottom: 85px;
     }
 
-
-    /* Tarjetas 2 x 2 */
-
     .event-info-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
-    /* Grid de tarjetas */
 
     .event-detail-section .simple-grid:not(.event-info-grid) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-    /* Ponentes */
-
     .webinar-speakers-section {
         padding: 60px 40px;
     }
-
 
     .speaker-featured,
     .speaker-featured-reverse {
         grid-template-columns: 1fr 1fr;
     }
 
-
     .speaker-featured-info {
         padding: 40px;
     }
 
-
     .speaker-featured-info h3 {
         font-size: 1.7rem;
     }
-
-
-    /* Ubicación */
 
     .convention-location-grid {
         grid-template-columns: 1fr;
@@ -795,21 +1048,18 @@
         gap: 40px;
     }
 
-
     .convention-location-map {
         min-height: 380px;
     }
 
-
     .convention-location-map iframe {
         min-height: 380px;
     }
-
 }
 
 
 /* =========================================================
-   23. TABLET PEQUEÑA
+   31. TABLET PEQUEÑA
    ========================================================= */
 
 @media (max-width: 800px) {
@@ -819,36 +1069,56 @@
         grid-template-columns: 1fr;
     }
 
-
     .speaker-featured-reverse .speaker-featured-info {
         order: 1;
     }
-
 
     .speaker-featured-reverse .speaker-featured-image {
         order: 2;
     }
 
-
     .speaker-featured-image {
-        min-height: 380px;
-
         height: 380px;
+        min-height: 380px;
     }
-
 
     .speaker-featured-info {
         padding: 35px;
     }
-
 }
 
 
 /* =========================================================
-   24. MÓVIL
+   32. MÓVIL
    ========================================================= */
 
 @media (max-width: 700px) {
+
+    .events-list-section,
+    .events-types-section {
+        margin-top: 65px;
+    }
+
+    .events-list-section .simple-grid,
+    .events-types-section .simple-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 30px;
+    }
+
+    .events-list-section .simple-card,
+    .events-types-section .simple-card {
+        min-height: auto;
+
+        padding: 27px;
+    }
+
+    .events-list-section .simple-card h3,
+    .events-types-section .simple-card h3 {
+        font-size: 1.2rem;
+    }
 
     .event-detail-section,
     .webinar-speakers-section,
@@ -857,10 +1127,7 @@
         margin-bottom: 65px;
     }
 
-
-    /* =========================================
-       TARJETAS INFORMACIÓN EVENTO
-       ========================================= */
+    /* Información del evento */
 
     .event-info-grid {
         grid-template-columns: 1fr;
@@ -870,17 +1137,13 @@
         margin-top: 30px;
     }
 
-
     .event-info-grid .simple-card {
         min-height: auto;
 
         padding: 25px;
     }
 
-
-    /* =========================================
-       TARJETAS GENERALES
-       ========================================= */
+    /* Tarjetas generales */
 
     .event-detail-section .simple-grid:not(.event-info-grid) {
         grid-template-columns: 1fr;
@@ -890,17 +1153,13 @@
         margin-top: 30px;
     }
 
-
     .event-detail-section .simple-grid:not(.event-info-grid) .simple-card {
         min-height: auto;
 
         padding: 25px;
     }
 
-
-    /* =========================================
-       PONENTES
-       ========================================= */
+    /* Ponentes */
 
     .webinar-speakers-section {
         padding: 50px 25px;
@@ -908,11 +1167,9 @@
         border-radius: 8px;
     }
 
-
     .webinar-section-header {
         margin-bottom: 35px;
     }
-
 
     .speaker-featured {
         margin-bottom: 25px;
@@ -920,28 +1177,22 @@
         border-radius: 8px;
     }
 
-
     .speaker-featured-image {
         height: 360px;
-
         min-height: 360px;
     }
-
 
     .speaker-featured-info {
         padding: 30px 25px;
     }
 
-
     .speaker-featured-info h3 {
         font-size: 1.5rem;
     }
 
-
     .speaker-bio {
         font-size: 0.92rem;
     }
-
 
     .speaker-linkedin {
         width: 100%;
@@ -949,25 +1200,19 @@
         justify-content: center;
     }
 
-
-    /* =========================================
-       UBICACIÓN
-       ========================================= */
+    /* Ubicación */
 
     .convention-location-header {
         margin-bottom: 30px;
     }
 
-
     .convention-location-header h2 {
         font-size: 1.8rem;
     }
 
-
     .convention-location-info h3 {
         font-size: 1.35rem;
     }
-
 
     .convention-location-map {
         min-height: 300px;
@@ -975,11 +1220,9 @@
         border-radius: 8px;
     }
 
-
     .convention-location-map iframe {
         min-height: 300px;
     }
-
 
     .convention-location-button {
         width: 100%;
@@ -987,10 +1230,7 @@
         justify-content: center;
     }
 
-
-    /* =========================================
-       CTA
-       ========================================= */
+    /* CTA */
 
     .event-cta {
         padding: 50px 25px;
@@ -998,14 +1238,33 @@
         border-radius: 8px;
     }
 
+    /* Volver */
+
+    .content-page .back {
+        margin-top: 35px;
+    }
 }
 
 
 /* =========================================================
-   25. MÓVIL PEQUEÑO
+   33. MÓVIL PEQUEÑO
    ========================================================= */
 
 @media (max-width: 480px) {
+
+    .events-list-section .simple-card,
+    .events-types-section .simple-card {
+        padding: 24px;
+    }
+
+    .events-list-section .simple-card .btn,
+    .events-types-section .simple-card .btn {
+        width: 100%;
+    }
+
+    .content-page .container > section:last-of-type {
+        padding: 30px 20px;
+    }
 
     .event-detail-section,
     .webinar-speakers-section,
@@ -1014,13 +1273,11 @@
         margin-bottom: 55px;
     }
 
-
     /* Información */
 
     .event-info-grid .simple-card {
         padding: 22px;
     }
-
 
     /* Ponentes */
 
@@ -1028,18 +1285,14 @@
         padding: 45px 20px;
     }
 
-
     .speaker-featured-image {
         height: 320px;
-
         min-height: 320px;
     }
-
 
     .speaker-featured-info {
         padding: 25px 22px;
     }
-
 
     /* Ubicación */
 
@@ -1047,16 +1300,13 @@
         min-height: 280px;
     }
 
-
     .convention-location-map iframe {
         min-height: 280px;
     }
-
 
     /* CTA */
 
     .event-cta {
         padding: 45px 20px;
     }
-
 }
