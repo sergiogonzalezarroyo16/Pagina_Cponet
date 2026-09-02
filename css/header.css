@@ -11,6 +11,7 @@
   transition: .3s;
   background: transparent;
   color: white;
+  font-family: var(--font-body);
 }
 
 .site-header.is-scrolled {
@@ -135,6 +136,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
+  font-family: var(--font-body);
   font-size: .82rem;
   font-weight: 700;
   margin-left: auto;
@@ -142,6 +144,7 @@
 
 .desktop-nav > a {
   position: relative;
+  font-family: var(--font-body);
   color: inherit;
   transition: .25s ease;
   white-space: nowrap;

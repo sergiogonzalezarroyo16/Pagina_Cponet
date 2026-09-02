@@ -1,3 +1,4 @@
+
 /* =========================================================
    CONVENCIÓN CPONET 2026
    ========================================================= */
@@ -35,21 +36,15 @@
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-
     padding: 1rem 1.8rem;
-
     background: var(--accent);
     color: var(--navy);
-
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 0.04em;
-
     text-decoration: none;
-
     border: 1px solid var(--accent);
     border-radius: 6px;
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
@@ -61,17 +56,14 @@
 .hero-cta-button span {
     font-size: 1.2rem;
     line-height: 1;
-
     transition: transform 0.25s ease;
 }
 
 .hero-cta-button:hover {
     transform: translateY(-2px);
-
     background: var(--navy);
     border-color: var(--navy);
     color: #ffffff;
-
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
@@ -91,18 +83,14 @@
 
 .convention-countdown-section {
     padding: 45px 0 50px;
-
     background: #ffffff;
-
     border-bottom: 1px solid rgba(4, 18, 34, 0.09);
 }
 
 .convention-countdown {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     text-align: center;
 }
 
@@ -113,28 +101,22 @@
 .convention-countdown-header .eyebrow {
     display: block;
     margin-bottom: 8px;
-
     color: var(--accent);
 }
 
 .convention-countdown-header h2,
 .convention-countdown-header h3 {
     margin: 0 0 7px;
-
     color: var(--navy);
-
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 3vw, 2.1rem);
-
     line-height: 1.15;
     letter-spacing: -0.025em;
 }
 
 .convention-countdown-header p {
     margin: 0;
-
     color: #718292;
-
     font-size: 0.82rem;
     font-weight: 600;
 }
@@ -142,66 +124,48 @@
 .convention-countdown-grid {
     display: flex;
     flex-direction: row;
-
     align-items: center;
     justify-content: center;
-
     gap: 14px;
-
     width: auto;
 }
 
 .convention-countdown-item {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     min-width: 95px;
 }
 
 .convention-countdown-item strong {
     display: block;
-
     color: var(--navy);
-
     font-family: var(--font-display);
-
     font-size: clamp(2.1rem, 4vw, 3.2rem);
     font-weight: 800;
-
     line-height: 1;
     letter-spacing: -0.04em;
 }
 
 .convention-countdown-item span {
     display: block;
-
     margin-top: 9px;
-
     color: #718292;
-
     font-size: 0.62rem;
     font-weight: 800;
-
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .convention-countdown-separator {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     margin-top: -15px;
-
     color: var(--accent);
-
     font-size: 2rem;
     font-weight: 800;
-
     line-height: 1;
 }
 
@@ -269,23 +233,18 @@
 
 .simple-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
 }
 
 .simple-card {
     min-height: 200px;
-
     padding: 30px;
-
     background: var(--cream);
 }
 
 .simple-card h3 {
     margin-bottom: 10px;
-
     font-size: 1.2rem;
 }
 
@@ -295,16 +254,249 @@
 
 
 /* =========================================================
-   7. SECCIÓN DESTACADA
+   7. AGENDA · SALAS PARALELAS
    ========================================================= */
 
-.convention-highlight {
-    padding-top: 0;
+/* CABECERA */
+
+.agenda-header {
+    max-width: 850px;
+    margin-bottom: 45px;
+}
+
+.agenda-header .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.agenda-header h2 {
+    margin: 0 0 18px;
+}
+
+.agenda-intro {
+    max-width: 750px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+
+/* GRID */
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 0;
+}
+
+
+/* TARJETAS */
+
+.agenda-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid rgba(4, 18, 34, 0.09);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(4, 18, 34, 0.05);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.agenda-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(4, 18, 34, 0.16);
+    box-shadow: 0 15px 35px rgba(4, 18, 34, 0.09);
+}
+
+
+/* PARTE SUPERIOR */
+
+.agenda-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* SALA */
+
+.agenda-room {
+    display: inline-flex;
+    align-items: center;
+    color: var(--navy);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.agenda-room::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 9px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+
+/* CATEGORÍA */
+
+.agenda-category {
+    color: #718292;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* TÍTULO */
+
+.agenda-card h3 {
+    margin: 0 0 16px;
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+
+/* DESCRIPCIÓN */
+
+.agenda-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* EMPRESAS */
+
+.agenda-companies {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.companies-label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* TAGS */
+
+.company-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.company-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    background: #f5f7f9;
+    border: 1px solid rgba(4, 18, 34, 0.07);
+    border-radius: 4px;
+    color: #536575;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.company-tags span:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--navy);
 }
 
 
 /* =========================================================
-   8. AGENDA / PROGRAMA
+   8. SALA 25 · MISMO ESTILO QUE EL RESTO
+   ========================================================= */
+
+/*
+   Se mantiene la clase agenda-card-featured por compatibilidad
+   con el HTML, pero visualmente la tarjeta es idéntica al resto.
+*/
+
+.agenda-card-featured {
+    background: #ffffff;
+    border-color: rgba(4, 18, 34, 0.09);
+    color: inherit;
+}
+
+.agenda-card-featured:hover {
+    border-color: rgba(4, 18, 34, 0.16);
+}
+
+.agenda-card-featured .agenda-room {
+    color: var(--navy);
+}
+
+.agenda-card-featured .agenda-category {
+    color: #718292;
+}
+
+.agenda-card-featured h3 {
+    color: var(--navy);
+}
+
+.agenda-card-featured .agenda-description {
+    color: var(--muted);
+}
+
+
+/* ENFOQUES DE LA SALA 25 */
+
+.agenda-focus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.agenda-focus span {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    background: #f5f7f9;
+    border: 1px solid rgba(4, 18, 34, 0.07);
+    border-radius: 4px;
+    color: #536575;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   9. AGENDA / PROGRAMA ANTIGUO
    ========================================================= */
 
 .convention-agenda {
@@ -313,13 +505,11 @@
 
 .convention-agenda-header {
     max-width: 850px;
-
     margin-bottom: 45px;
 }
 
 .convention-agenda-header .eyebrow {
     display: inline-block;
-
     margin-bottom: 18px;
 }
 
@@ -329,51 +519,40 @@
 
 .convention-agenda-header p {
     max-width: 750px;
-
     margin: 0;
 }
 
 
 /* =========================================================
-   9. LÍNEA DE TIEMPO DEL PROGRAMA
+   10. LÍNEA DE TIEMPO DEL PROGRAMA
    ========================================================= */
 
 .convention-program {
     position: relative;
-
     width: 100%;
 }
 
 .convention-program::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     bottom: 0;
     left: 155px;
-
     width: 1px;
-
     background: rgba(4, 18, 34, 0.12);
 }
 
 
 /* =========================================================
-   10. ELEMENTO DEL PROGRAMA
+   11. ELEMENTO DEL PROGRAMA
    ========================================================= */
 
 .convention-program-item {
     position: relative;
-
     display: grid;
-
     grid-template-columns: 120px 70px 1fr;
-
     gap: 0;
-
     min-height: 130px;
-
     padding-bottom: 35px;
 }
 
@@ -383,54 +562,40 @@
 
 
 /* =========================================================
-   11. HORA
+   12. HORA
    ========================================================= */
 
 .convention-program-time {
     padding-top: 3px;
-
     color: var(--navy);
-
     font-family: var(--font-display);
-
     font-size: 1.15rem;
     font-weight: 800;
-
     line-height: 1.2;
-
     text-align: right;
 }
 
 
 /* =========================================================
-   12. MARCADOR
+   13. MARCADOR
    ========================================================= */
 
 .convention-program-marker {
     position: relative;
-
     display: flex;
-
     align-items: flex-start;
     justify-content: center;
-
     padding-top: 4px;
-
     z-index: 2;
 }
 
 .convention-program-marker span {
     display: block;
-
     width: 14px;
     height: 14px;
-
     background: var(--accent);
-
     border: 3px solid #ffffff;
-
     border-radius: 50%;
-
     box-shadow:
         0 0 0 1px rgba(7, 125, 243, 0.25),
         0 4px 10px rgba(4, 18, 34, 0.08);
@@ -438,7 +603,7 @@
 
 
 /* =========================================================
-   13. INFORMACIÓN DEL PROGRAMA
+   14. INFORMACIÓN DEL PROGRAMA
    ========================================================= */
 
 .convention-program-info {
@@ -447,41 +612,28 @@
 
 .convention-program-type {
     display: block;
-
     margin-bottom: 8px;
-
     color: var(--accent);
-
     font-size: 0.68rem;
     font-weight: 800;
-
     letter-spacing: 0.1em;
-
     text-transform: uppercase;
 }
 
 .convention-program-info h3 {
     margin: 0 0 10px;
-
     color: var(--navy);
-
     font-family: var(--font-display);
-
     font-size: 1.2rem;
     font-weight: 800;
-
     line-height: 1.3;
 }
 
 .convention-program-info p {
     max-width: 720px;
-
     margin: 0 0 10px;
-
     color: var(--muted);
-
     font-size: 0.95rem;
-
     line-height: 1.7;
 }
 
@@ -491,7 +643,7 @@
 
 
 /* =========================================================
-   14. ÚLTIMO ELEMENTO DEL PROGRAMA
+   15. ÚLTIMO ELEMENTO DEL PROGRAMA
    ========================================================= */
 
 .convention-program-last {
@@ -500,7 +652,7 @@
 
 
 /* =========================================================
-   15. PONENTES
+   16. PONENTES
    ========================================================= */
 
 .speakers-section {
@@ -509,13 +661,11 @@
 
 .speakers-header {
     max-width: 850px;
-
     margin-bottom: 40px;
 }
 
 .speakers-header .eyebrow {
     display: inline-block;
-
     margin-bottom: 18px;
 }
 
@@ -525,164 +675,192 @@
 
 .speakers-header p {
     max-width: 750px;
-
     margin: 0;
 }
 
 
 /* =========================================================
-   16. CARRUSEL DE PONENTES
+   17. GALERÍA · CONVENCIÓN CPONET
    ========================================================= */
 
-.speakers-carousel {
-    position: relative;
+/* =========================================================
+   SECCIÓN
+   ========================================================= */
 
-    display: flex;
+.convention-gallery-section {
 
-    align-items: center;
-
-    gap: 20px;
-}
-
-.speakers-track-wrapper {
     width: 100%;
+    margin-bottom: 110px;
+    padding: 0;
 
-    overflow: hidden;
-}
-
-.speakers-track {
-    display: flex;
-
-    gap: 24px;
-
-    transition: transform 0.45s ease;
-
-    will-change: transform;
 }
 
 
 /* =========================================================
-   17. TARJETAS DE PONENTES
+   CABECERA
    ========================================================= */
 
-.speaker-card {
-    flex: 0 0 calc((100% - 48px) / 3);
+.convention-gallery-header {
+
+    max-width: 850px;
+    margin-bottom: 45px;
+
+}
+
+.convention-gallery-header .eyebrow {
+
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--accent);
+
+}
+
+.convention-gallery-header h2 {
+
+    margin: 0 0 18px;
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+
+}
+
+.convention-gallery-header p {
+
+    max-width: 720px;
+    margin: 0;
+    color: #667383;
+    font-size: 0.98rem;
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CARRUSEL
+   ========================================================= */
+
+.convention-gallery-carousel {
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL TRACK
+   ========================================================= */
+
+.convention-gallery-track-wrapper {
+
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.convention-gallery-track {
+
+    display: flex;
+    gap: 20px;
+
+    transition: transform 0.45s ease;
+    will-change: transform;
+
+}
+
+
+/* =========================================================
+   TARJETA DE FOTO
+   ========================================================= */
+
+.convention-gallery-card {
+
+    flex: 0 0 calc((100% - 40px) / 3);
 
     min-width: 0;
-
     overflow: hidden;
 
     background: #ffffff;
 
     border: 1px solid rgba(4, 18, 34, 0.08);
-
     border-radius: 8px;
 
-    box-shadow: 0 8px 25px rgba(4, 18, 34, 0.05);
+    box-shadow:
+        0 8px 25px rgba(4, 18, 34, 0.05);
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+
 }
 
-.speaker-card:hover {
+.convention-gallery-card:hover {
+
     transform: translateY(-5px);
 
-    box-shadow: 0 15px 35px rgba(4, 18, 34, 0.1);
+    box-shadow:
+        0 15px 35px rgba(4, 18, 34, 0.10);
+
 }
 
 
 /* =========================================================
-   18. FOTO PONENTE
+   IMAGEN
    ========================================================= */
 
-.speaker-image {
+.convention-gallery-image {
+
     width: 100%;
-    height: 330px;
+    height: 280px;
 
     overflow: hidden;
 
-    background: #e9eef3;
+    background: #eef2f5;
+
 }
 
-.speaker-image img {
+.convention-gallery-image img {
+
     display: block;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
 
-    transition: transform 0.4s ease;
+    transition:
+        transform 0.45s ease;
+
 }
 
-.speaker-card:hover .speaker-image img {
-    transform: scale(1.03);
-}
+.convention-gallery-card:hover
+.convention-gallery-image img {
 
+    transform: scale(1.04);
 
-/* =========================================================
-   19. INFORMACIÓN PONENTE
-   ========================================================= */
-
-.speaker-info {
-    padding: 25px 26px 28px;
-}
-
-.speaker-info h3 {
-    margin: 0 0 8px;
-
-    color: var(--navy);
-
-    font-size: 1.05rem;
-    font-weight: 800;
-
-    letter-spacing: 0.01em;
-}
-
-.speaker-role {
-    display: block;
-
-    margin: 0 0 4px;
-
-    color: var(--accent);
-
-    font-size: 0.9rem;
-    font-weight: 700;
-
-    line-height: 1.5;
-}
-
-.speaker-company {
-    display: block;
-
-    margin: 0;
-
-    color: #687887;
-
-    font-size: 0.85rem;
-
-    line-height: 1.5;
 }
 
 
 /* =========================================================
-   20. FLECHAS DEL CARRUSEL
+   FLECHAS
    ========================================================= */
 
-.speakers-arrow {
+.convention-gallery-arrow {
+
     flex: 0 0 44px;
 
     width: 44px;
     height: 44px;
 
     display: grid;
-
     place-items: center;
 
     border: 1px solid rgba(4, 18, 34, 0.15);
-
     border-radius: 50%;
 
     background: #ffffff;
@@ -699,9 +877,11 @@
         color 0.25s ease,
         border-color 0.25s ease,
         transform 0.25s ease;
+
 }
 
-.speakers-arrow:hover {
+.convention-gallery-arrow:hover {
+
     background: var(--accent);
 
     border-color: var(--accent);
@@ -709,22 +889,26 @@
     color: var(--navy);
 
     transform: translateY(-2px);
+
 }
 
-.speakers-arrow:disabled {
+.convention-gallery-arrow:disabled {
+
     opacity: 0.35;
 
     cursor: default;
 
     transform: none;
+
 }
 
 
 /* =========================================================
-   21. INDICADORES DEL CARRUSEL
+   INDICADORES
    ========================================================= */
 
-.speakers-dots {
+.convention-gallery-dots {
+
     display: flex;
 
     justify-content: center;
@@ -733,16 +917,17 @@
     gap: 8px;
 
     margin-top: 28px;
+
 }
 
-.speakers-dot {
+.convention-gallery-dot {
+
     width: 8px;
     height: 8px;
 
     padding: 0;
 
     border: 0;
-
     border-radius: 50%;
 
     background: #c7d0d9;
@@ -752,620 +937,398 @@
     transition:
         width 0.25s ease,
         background 0.25s ease;
+
 }
 
-.speakers-dot.is-active {
+.convention-gallery-dot.is-active {
+
     width: 24px;
 
     border-radius: 20px;
 
     background: var(--accent);
+
 }
 
+
 /* =========================================================
-   22. ORGANIZA · CONVENCIÓN CPONET
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .convention-gallery-section {
+
+        margin-bottom: 85px;
+
+    }
+
+    .convention-gallery-card {
+
+        flex: 0 0 calc((100% - 20px) / 2);
+
+    }
+
+    .convention-gallery-image {
+
+        height: 260px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .convention-gallery-section {
+
+        margin-bottom: 65px;
+
+    }
+
+    .convention-gallery-header {
+
+        margin-bottom: 30px;
+
+    }
+
+    .convention-gallery-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .convention-gallery-header p {
+
+        font-size: 0.92rem;
+        line-height: 1.7;
+
+    }
+
+    .convention-gallery-carousel {
+
+        gap: 10px;
+
+    }
+
+    .convention-gallery-card {
+
+        flex: 0 0 100%;
+
+    }
+
+    .convention-gallery-image {
+
+        height: 300px;
+
+    }
+
+    .convention-gallery-arrow {
+
+        flex: 0 0 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .convention-gallery-section {
+
+        margin-bottom: 55px;
+
+    }
+
+    .convention-gallery-header h2 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .convention-gallery-image {
+
+        height: 240px;
+
+    }
+
+}
+
+
+
+
+/* =========================================================
+   23. ORGANIZA · CONVENCIÓN CPONET
    ========================================================= */
 
 .convention-organizer-section {
-
     width: 100%;
-
     padding: 20px 0 80px;
-
     background: #ffffff;
 }
-
-
-
-/* =========================================================
-   23. CONTENEDOR ORGANIZA
-   ========================================================= */
 
 .convention-organizer {
     width: 100%;
 }
 
-
-/* =========================================================
-   24. CABECERA ORGANIZA
-   ========================================================= */
-
 .convention-organizer .convention-section-header {
-
     max-width: 850px;
-
     margin-bottom: 40px;
 }
 
-
-/* EYEBROW */
-
 .convention-organizer .convention-section-header .eyebrow {
-
     display: inline-block;
-
     margin-bottom: 14px;
-
     color: var(--accent);
 }
 
-
-/* TÍTULO */
-
 .convention-organizer .convention-section-header h2 {
-
     margin: 0 0 16px;
-
     color: var(--navy);
-
     font-size: clamp(2rem, 3.5vw, 3rem);
-
     line-height: 1.15;
-
     letter-spacing: -0.03em;
 }
 
-
-/* TEXTO */
-
 .convention-organizer .convention-section-header p {
-
     max-width: 720px;
-
     margin: 0;
-
     color: #667383;
-
     font-size: 0.98rem;
-
     line-height: 1.8;
 }
 
 
 /* =========================================================
-   25. TARJETA DEL ORGANIZADOR
+   24. TARJETA DEL ORGANIZADOR
    ========================================================= */
 
 .convention-organizer-card {
-
     display: grid;
-
     grid-template-columns: 45% 55%;
-
     align-items: stretch;
-
     width: 100%;
-
     min-height: 330px;
-
     overflow: hidden;
-
     background: #f5f7f9;
-
     border: 1px solid rgba(4, 18, 34, 0.08);
-
     border-radius: 8px;
-
     box-shadow: 0 12px 35px rgba(4, 18, 34, 0.05);
 }
 
 
 /* =========================================================
-   26. IMAGEN DEL ORGANIZADOR
+   25. IMAGEN DEL ORGANIZADOR
    ========================================================= */
 
 .convention-organizer-image {
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     min-height: 330px;
-
     padding: 45px;
-
     background: #ffffff;
-
     border-right: 1px solid rgba(4, 18, 34, 0.08);
 }
 
-
 .convention-organizer-image img {
-
     display: block;
-
     width: auto;
     height: auto;
-
     max-width: 80%;
     max-height: 220px;
-
     object-fit: contain;
-
     object-position: center;
 }
 
 
 /* =========================================================
-   27. INFORMACIÓN DEL ORGANIZADOR
+   26. INFORMACIÓN DEL ORGANIZADOR
    ========================================================= */
 
 .convention-organizer-info {
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     padding: 50px 55px;
 }
 
-
-/* ETIQUETA ORGANIZA */
-
 .convention-organizer-info .organizer-role {
-
     display: inline-block;
-
     margin-bottom: 12px;
-
     color: var(--accent);
-
     font-size: 0.68rem;
-
     font-weight: 800;
-
     letter-spacing: 0.12em;
-
     text-transform: uppercase;
 }
 
-
-/* NOMBRE */
-
 .convention-organizer-info h3 {
-
     margin: 0 0 12px;
-
     color: var(--navy);
-
     font-family: var(--font-display);
-
     font-size: clamp(1.8rem, 3vw, 2.6rem);
-
     line-height: 1.1;
-
     letter-spacing: -0.025em;
 }
 
-
-/* DESCRIPCIÓN */
-
 .convention-organizer-info p {
-
     max-width: 600px;
-
     margin: 0;
-
     color: #536575;
-
     font-size: 0.95rem;
-
     line-height: 1.8;
 }
 
 
 /* =========================================================
-   28. RESPONSIVE · TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .convention-organizer-section {
-
-        padding: 65px 0 70px;
-    }
-
-
-    .convention-organizer .convention-section-header {
-
-        margin-bottom: 35px;
-    }
-
-
-    .convention-organizer-card {
-
-        grid-template-columns: 40% 60%;
-
-        min-height: 300px;
-    }
-
-
-    .convention-organizer-image {
-
-        min-height: 300px;
-
-        padding: 35px;
-    }
-
-
-    .convention-organizer-info {
-
-        padding: 40px;
-    }
-
-}
-
-
-/* =========================================================
-   29. RESPONSIVE · MÓVIL
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .convention-organizer-section {
-
-        padding: 55px 0 60px;
-    }
-
-
-    .convention-organizer .convention-section-header {
-
-        margin-bottom: 30px;
-    }
-
-
-    .convention-organizer .convention-section-header h2 {
-
-        font-size: 2rem;
-    }
-
-
-    .convention-organizer .convention-section-header p {
-
-        font-size: 0.92rem;
-
-        line-height: 1.7;
-    }
-
-
-    .convention-organizer-card {
-
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-    }
-
-
-    .convention-organizer-image {
-
-        min-height: 240px;
-
-        padding: 35px;
-
-        border-right: 0;
-
-        border-bottom: 1px solid rgba(4, 18, 34, 0.08);
-    }
-
-
-    .convention-organizer-image img {
-
-        max-width: 70%;
-
-        max-height: 170px;
-    }
-
-
-    .convention-organizer-info {
-
-        padding: 35px 30px 40px;
-    }
-
-
-    .convention-organizer-info h3 {
-
-        font-size: 2rem;
-    }
-
-
-    .convention-organizer-info p {
-
-        font-size: 0.92rem;
-
-        line-height: 1.7;
-    }
-
-}
-
-
-/* =========================================================
-   30. RESPONSIVE · MÓVIL PEQUEÑO
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .convention-organizer-section {
-
-        padding: 45px 0 50px;
-    }
-
-
-    .convention-organizer .convention-section-header h2 {
-
-        font-size: 1.75rem;
-    }
-
-
-    .convention-organizer-image {
-
-        min-height: 210px;
-
-        padding: 30px;
-    }
-
-
-    .convention-organizer-image img {
-
-        max-width: 75%;
-
-        max-height: 150px;
-    }
-
-
-    .convention-organizer-info {
-
-        padding: 30px 22px 35px;
-    }
-
-
-    .convention-organizer-info h3 {
-
-        font-size: 1.75rem;
-    }
-
-
-    .convention-organizer-info p {
-
-        font-size: 0.88rem;
-
-        line-height: 1.65;
-    }
-
-}
-/* =========================================================
-   31. PATROCINADORES
+   27. PATROCINADORES · BLOQUE CLARO
    ========================================================= */
 
 .convention-sponsors-section {
-
     width: 100%;
-
     padding: 40px 0 90px;
-
     background: #ffffff;
 }
 
-
-/* =========================================================
-   32. CABECERA PATROCINADORES
-   ========================================================= */
-
 .convention-sponsors-header {
-
     max-width: 850px;
-
     margin-bottom: 45px;
 }
 
 .convention-sponsors-header .eyebrow {
-
     display: inline-block;
-
     margin-bottom: 14px;
-
     color: var(--accent);
 }
 
 .convention-sponsors-header h2 {
-
     margin: 0 0 16px;
-
     color: var(--navy);
-
     font-family: var(--font-display);
-
     font-size: clamp(2rem, 3.5vw, 3rem);
-
     line-height: 1.15;
-
     letter-spacing: -0.03em;
 }
 
 .convention-sponsors-header p {
-
     max-width: 720px;
-
     margin: 0;
-
     color: #667383;
-
     font-size: 0.98rem;
-
     line-height: 1.8;
 }
 
 
 /* =========================================================
-   33. CARRUSEL
+   28. CARRUSEL PATROCINADORES
    ========================================================= */
 
 .convention-sponsors-carousel {
-
     display: flex;
-
     align-items: center;
-
     gap: 18px;
-
     width: 100%;
 }
 
-
-/* =========================================================
-   34. CONTENEDOR DEL CARRUSEL
-   ========================================================= */
-
 .convention-sponsors-track-wrapper {
-
     width: 100%;
-
     overflow: hidden;
 }
 
 .convention-sponsors-track {
-
     display: flex;
-
     gap: 20px;
-
     transition: transform 0.45s ease;
-
     will-change: transform;
 }
 
 
 /* =========================================================
-   35. TARJETA PATROCINADOR
+   29. TARJETA PATROCINADOR
    ========================================================= */
 
 .convention-sponsor-card {
-
     flex: 0 0 calc((100% - 40px) / 3);
-
     min-width: 0;
-
     height: 190px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 30px;
-
     background: #ffffff;
-
     border: 1px solid rgba(4, 18, 34, 0.08);
-
     border-radius: 8px;
-
     box-shadow: 0 8px 25px rgba(4, 18, 34, 0.05);
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 .convention-sponsor-card:hover {
-
     transform: translateY(-4px);
-
     box-shadow: 0 15px 35px rgba(4, 18, 34, 0.09);
 }
 
 
 /* =========================================================
-   36. LOGO
+   30. LOGOS
    ========================================================= */
 
 .convention-sponsor-logo {
-
     width: 100%;
     height: 100%;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
 
 .convention-sponsor-logo img {
-
     display: block;
-
     width: auto;
     height: auto;
-
     max-width: 85%;
     max-height: 100px;
-
     object-fit: contain;
-
     object-position: center;
-
     transition: transform 0.3s ease;
 }
 
-.convention-sponsor-card:hover
-.convention-sponsor-logo img {
-
+.convention-sponsor-card:hover .convention-sponsor-logo img {
     transform: scale(1.04);
 }
 
 
 /* =========================================================
-   37. FLECHAS
+   31. FLECHAS PATROCINADORES
    ========================================================= */
 
 .convention-sponsors-arrow {
-
     flex: 0 0 44px;
-
     width: 44px;
     height: 44px;
-
     display: grid;
-
     place-items: center;
-
     border: 1px solid rgba(4, 18, 34, 0.15);
-
     border-radius: 50%;
-
     background: #ffffff;
-
     color: var(--navy);
-
     font-size: 1.15rem;
-
     font-weight: 700;
-
     cursor: pointer;
-
     transition:
         background 0.25s ease,
         color 0.25s ease,
@@ -1374,468 +1337,54 @@
 }
 
 .convention-sponsors-arrow:hover {
-
     background: var(--accent);
-
     border-color: var(--accent);
-
     color: var(--navy);
-
     transform: translateY(-2px);
 }
 
 .convention-sponsors-arrow:disabled {
-
     opacity: 0.35;
-
     cursor: default;
-
     transform: none;
 }
 
 
 /* =========================================================
-   38. INDICADORES
+   32. INDICADORES PATROCINADORES
    ========================================================= */
 
 .convention-sponsors-dots {
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     gap: 8px;
-
     margin-top: 28px;
 }
 
 .convention-sponsors-dot {
-
     width: 8px;
     height: 8px;
-
     padding: 0;
-
     border: 0;
-
     border-radius: 50%;
-
     background: #c7d0d9;
-
     cursor: pointer;
-
     transition:
         width 0.25s ease,
         background 0.25s ease;
 }
 
 .convention-sponsors-dot.is-active {
-
     width: 24px;
-
     border-radius: 20px;
-
     background: var(--accent);
 }
 
 
 /* =========================================================
-   39. TABLET
+   33. EMPRESAS & PATROCINADORES · BLOQUE OSCURO
    ========================================================= */
-
-@media (max-width: 1000px) {
-
-    .convention-sponsors-section {
-
-        padding: 70px 0 80px;
-    }
-
-    .convention-sponsor-card {
-
-        flex: 0 0 calc((100% - 20px) / 2);
-
-        height: 180px;
-    }
-
-}
-
-
-/* =========================================================
-   40. MÓVIL
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .convention-sponsors-section {
-
-        padding: 60px 0 70px;
-    }
-
-    .convention-sponsors-header {
-
-        margin-bottom: 30px;
-    }
-
-    .convention-sponsors-header h2 {
-
-        font-size: 2rem;
-    }
-
-    .convention-sponsors-header p {
-
-        font-size: 0.92rem;
-
-        line-height: 1.7;
-    }
-
-
-    .convention-sponsors-carousel {
-
-        gap: 10px;
-    }
-
-
-    .convention-sponsor-card {
-
-        flex: 0 0 100%;
-
-        height: 180px;
-
-        padding: 25px;
-    }
-
-
-    .convention-sponsors-arrow {
-
-        flex: 0 0 38px;
-
-        width: 38px;
-        height: 38px;
-
-        font-size: 1rem;
-    }
-
-
-    .convention-sponsor-logo img {
-
-        max-width: 75%;
-
-        max-height: 90px;
-    }
-
-}
-
-
-/* =========================================================
-   41. MÓVIL PEQUEÑO
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .convention-sponsors-section {
-
-        padding: 50px 0 60px;
-    }
-
-    .convention-sponsors-header h2 {
-
-        font-size: 1.75rem;
-    }
-
-    .convention-sponsor-card {
-
-        height: 160px;
-    }
-
-}
-
-
-/* =========================================================
-   22. FOLLETO / DOCUMENTACIÓN
-   ========================================================= */
-
-.convention-brochure {
-    width: 100%;
-
-    padding: 70px 60px;
-
-    background: #f5f7f9;
-
-    border-top: 1px solid rgba(4, 18, 34, 0.06);
-
-    border-bottom: 1px solid rgba(4, 18, 34, 0.06);
-}
-
-.convention-brochure-header {
-    max-width: 850px;
-
-    margin: 0 auto 35px;
-}
-
-.convention-brochure-header .eyebrow {
-    display: inline-block;
-
-    margin-bottom: 14px;
-}
-
-.convention-brochure-header h2 {
-    margin-bottom: 15px;
-}
-
-.convention-brochure-header p {
-    max-width: 750px;
-
-    margin: 0;
-}
-
-
-/* =========================================================
-   23. VISOR PDF
-   ========================================================= */
-
-.convention-brochure-viewer {
-    width: 100%;
-    max-width: 850px;
-
-    margin: 35px auto 0;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border: 1px solid rgba(4, 18, 34, 0.12);
-
-    border-radius: 8px;
-
-    box-shadow: 0 15px 40px rgba(4, 18, 34, 0.08);
-}
-
-.convention-brochure-viewer iframe {
-    display: block;
-
-    width: 100%;
-    height: 650px;
-
-    border: 0;
-
-    background: #ffffff;
-}
-
-
-/* =========================================================
-   24. BOTÓN DEL FOLLETO
-   ========================================================= */
-
-.convention-brochure-actions {
-    display: flex;
-
-    justify-content: center;
-
-    margin-top: 25px;
-}
-
-.convention-brochure-actions .btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 0.7rem;
-}
-
-
-/* =========================================================
-   25. UBICACIÓN
-   ========================================================= */
-
-.convention-location {
-    width: 100%;
-}
-
-.convention-location-header {
-    max-width: 750px;
-
-    margin-bottom: 2.5rem;
-}
-
-.convention-location-header .eyebrow {
-    display: inline-block;
-
-    margin-bottom: 1rem;
-}
-
-.convention-location-header h2 {
-    margin-bottom: 1rem;
-}
-
-.convention-location-header p {
-    max-width: 700px;
-}
-
-
-/* =========================================================
-   26. GRID UBICACIÓN
-   ========================================================= */
-
-.convention-location-grid {
-    display: grid;
-
-    grid-template-columns: 0.85fr 1.15fr;
-
-    gap: 3rem;
-
-    align-items: stretch;
-}
-
-
-/* =========================================================
-   27. INFORMACIÓN UBICACIÓN
-   ========================================================= */
-
-.convention-location-info {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.location-label {
-    display: block;
-
-    margin-bottom: 0.75rem;
-
-    color: var(--accent);
-
-    font-size: 0.7rem;
-    font-weight: 700;
-
-    letter-spacing: 0.1em;
-}
-
-.convention-location-info h3 {
-    margin-bottom: 1rem;
-}
-
-.location-address {
-    margin-bottom: 2rem;
-
-    color: var(--muted);
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   28. DETALLES UBICACIÓN
-   ========================================================= */
-
-.location-details {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 1.25rem;
-
-    margin-bottom: 2rem;
-}
-
-.location-detail {
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 1rem;
-}
-
-.location-detail-icon {
-    width: 40px;
-    height: 40px;
-
-    flex-shrink: 0;
-
-    display: grid;
-
-    place-items: center;
-
-    background: rgba(7, 125, 243, 0.08);
-
-    border-radius: 50%;
-
-    font-size: 1rem;
-}
-
-.location-detail strong {
-    display: block;
-
-    margin-bottom: 0.3rem;
-}
-
-.location-detail p {
-    margin: 0;
-
-    font-size: 0.9rem;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   29. BOTÓN UBICACIÓN
-   ========================================================= */
-
-.convention-location-button {
-    align-self: flex-start;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 0.7rem;
-}
-
-
-/* =========================================================
-   30. MAPA
-   ========================================================= */
-
-.convention-location-map {
-    min-height: 430px;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(4, 18, 34, 0.1);
-
-    border-radius: 12px;
-
-    background: #eef2f5;
-}
-
-.convention-location-map iframe {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    min-height: 430px;
-
-    border: 0;
-}
-
-
-/* =========================================================
-   31. ESPACIO
-   ========================================================= */
-
-.convention-space {
-    width: 100%;
-}
-
-
-/* =========================================================
-   EMPRESAS & PATROCINADORES
-========================================================= */
 
 .convention-sponsors {
     position: relative;
@@ -1844,11 +1393,6 @@
     color: #ffffff;
     overflow: hidden;
 }
-
-
-/* =========================================================
-   CABECERA
-========================================================= */
 
 .sponsors-header {
     max-width: 850px;
@@ -1883,53 +1427,33 @@
 
 
 /* =========================================================
-   LISTADO DE OPCIONES
-========================================================= */
+   34. OPCIONES DE PATROCINIO
+   ========================================================= */
 
 .sponsors-options {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-
-/* =========================================================
-   OPCIÓN
-========================================================= */
-
 .sponsor-option {
     position: relative;
-
     display: grid;
     grid-template-columns: 90px minmax(0, 1fr) 40px;
     align-items: center;
     gap: 35px;
-
     padding: 30px 10px;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-
     transition:
         background-color 0.3s ease,
         padding-left 0.3s ease;
 }
 
-
-/* =========================================================
-   NÚMERO
-========================================================= */
-
 .sponsor-option-number {
     color: #78c84a;
-
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.12em;
 }
-
-
-/* =========================================================
-   CONTENIDO
-========================================================= */
 
 .sponsor-option-content {
     display: grid;
@@ -1940,9 +1464,7 @@
 
 .sponsor-option-content h3 {
     margin: 0;
-
     color: #ffffff;
-
     font-size: clamp(1.35rem, 2vw, 1.8rem);
     line-height: 1.2;
     font-weight: 600;
@@ -1951,39 +1473,23 @@
 .sponsor-option-content p {
     max-width: 600px;
     margin: 0;
-
     color: rgba(255, 255, 255, 0.65);
-
     font-size: 0.98rem;
     line-height: 1.65;
 }
-
-
-/* =========================================================
-   FLECHA
-========================================================= */
 
 .sponsor-option-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 38px;
     height: 38px;
-
     color: #78c84a;
-
     font-size: 1.4rem;
-
     transition:
         transform 0.3s ease,
         color 0.3s ease;
 }
-
-
-/* =========================================================
-   HOVER
-========================================================= */
 
 .sponsor-option:hover {
     padding-left: 25px;
@@ -2001,10 +1507,339 @@
 
 
 /* =========================================================
-   RESPONSIVE TABLET
-========================================================= */
+   35. PREMIOS
+   ========================================================= */
 
-@media (max-width: 900px) {
+.convention-awards {
+    width: 100%;
+}
+
+
+/* =========================================================
+   36. FOLLETO / DOCUMENTACIÓN
+   ========================================================= */
+
+.convention-brochure {
+    width: 100%;
+    padding: 70px 60px;
+    background: #f5f7f9;
+    border-top: 1px solid rgba(4, 18, 34, 0.06);
+    border-bottom: 1px solid rgba(4, 18, 34, 0.06);
+}
+
+.convention-brochure-header {
+    max-width: 850px;
+    margin: 0 auto 35px;
+}
+
+.convention-brochure-header .eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.convention-brochure-header h2 {
+    margin-bottom: 15px;
+}
+
+.convention-brochure-header p {
+    max-width: 750px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   37. VISOR PDF
+   ========================================================= */
+
+.convention-brochure-viewer {
+    width: 100%;
+    max-width: 850px;
+    margin: 35px auto 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(4, 18, 34, 0.12);
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(4, 18, 34, 0.08);
+}
+
+.convention-brochure-viewer iframe {
+    display: block;
+    width: 100%;
+    height: 650px;
+    border: 0;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   38. BOTÓN DEL FOLLETO
+   ========================================================= */
+
+.convention-brochure-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.convention-brochure-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+
+/* =========================================================
+   39. UBICACIÓN
+   ========================================================= */
+
+.convention-location {
+    width: 100%;
+}
+
+.convention-location-header {
+    max-width: 750px;
+    margin-bottom: 2.5rem;
+}
+
+.convention-location-header .eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.convention-location-header h2 {
+    margin-bottom: 1rem;
+}
+
+.convention-location-header p {
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   40. GRID UBICACIÓN
+   ========================================================= */
+
+.convention-location-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   41. INFORMACIÓN UBICACIÓN
+   ========================================================= */
+
+.convention-location-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.convention-location-info h3 {
+    margin-bottom: 1rem;
+}
+
+.location-address {
+    margin-bottom: 2rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   42. DETALLES UBICACIÓN
+   ========================================================= */
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.location-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.location-detail-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(7, 125, 243, 0.08);
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.location-detail strong {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.location-detail p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   43. BOTÓN UBICACIÓN
+   ========================================================= */
+
+.convention-location-button {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+
+/* =========================================================
+   44. MAPA
+   ========================================================= */
+
+.convention-location-map {
+    min-height: 430px;
+    overflow: hidden;
+    border: 1px solid rgba(4, 18, 34, 0.1);
+    border-radius: 12px;
+    background: #eef2f5;
+}
+
+.convention-location-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+
+/* =========================================================
+   45. ESPACIO
+   ========================================================= */
+
+.convention-space {
+    width: 100%;
+}
+
+
+/* =========================================================
+   46. VOLVER
+   ========================================================= */
+
+.convention-back {
+    padding-top: 10px;
+}
+
+.convention-back .back {
+    display: inline-block;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   47. RESPONSIVE · TABLET 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .convention-intro,
+    .convention-section,
+    .speakers-section,
+    .convention-brochure,
+    .convention-location {
+        margin-bottom: 85px;
+    }
+
+    /* CONTADOR */
+
+    .convention-countdown-section {
+        padding: 40px 0 45px;
+    }
+
+    /* AGENDA ANTIGUA */
+
+    .convention-program::before {
+        left: 125px;
+    }
+
+    .convention-program-item {
+        grid-template-columns: 100px 50px 1fr;
+    }
+
+    /* PONENTES */
+
+    .speaker-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+    /* PATROCINADORES */
+
+    .convention-sponsors-section {
+        padding: 70px 0 80px;
+    }
+
+    .convention-sponsor-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+        height: 180px;
+    }
+
+    /* FOLLETO */
+
+    .convention-brochure {
+        padding: 60px 40px;
+    }
+
+    .convention-brochure-viewer {
+        max-width: 750px;
+    }
+
+    .convention-brochure-viewer iframe {
+        height: 560px;
+    }
+
+    /* ORGANIZADOR */
+
+    .convention-organizer-section {
+        padding: 65px 0 70px;
+    }
+
+    .convention-organizer .convention-section-header {
+        margin-bottom: 35px;
+    }
+
+    .convention-organizer-card {
+        grid-template-columns: 40% 60%;
+        min-height: 300px;
+    }
+
+    .convention-organizer-image {
+        min-height: 300px;
+        padding: 35px;
+    }
+
+    .convention-organizer-info {
+        padding: 40px;
+    }
+
+    /* PATROCINIO OSCURO */
 
     .convention-sponsors {
         padding: 85px 0;
@@ -2024,146 +1859,7 @@
         gap: 12px;
     }
 
-}
-
-
-/* =========================================================
-   RESPONSIVE MÓVIL
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .convention-sponsors {
-        padding: 70px 0;
-    }
-
-    .sponsors-header h2 {
-        font-size: 2.5rem;
-    }
-
-    .sponsors-header p {
-        font-size: 0.98rem;
-        line-height: 1.65;
-    }
-
-    .sponsor-option {
-        grid-template-columns: 40px minmax(0, 1fr);
-        gap: 18px;
-
-        padding: 25px 0;
-    }
-
-    .sponsor-option-content {
-        display: block;
-    }
-
-    .sponsor-option-content h3 {
-        margin-bottom: 10px;
-        font-size: 1.25rem;
-    }
-
-    .sponsor-option-content p {
-        font-size: 0.92rem;
-        line-height: 1.6;
-    }
-
-    .sponsor-option-arrow {
-        display: none;
-    }
-
-    .sponsor-option:hover {
-        padding-left: 8px;
-    }
-
-}
-
-
-/* =========================================================
-   33. PREMIOS
-   ========================================================= */
-
-.convention-awards {
-    width: 100%;
-}
-
-
-/* =========================================================
-   34. VOLVER
-   ========================================================= */
-
-.convention-back {
-    padding-top: 10px;
-}
-
-.convention-back .back {
-    display: inline-block;
-
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   35. TABLET
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-    .convention-intro,
-    .convention-section,
-    .speakers-section,
-    .convention-brochure,
-    .convention-location {
-        margin-bottom: 85px;
-    }
-
-
-    /* CONTADOR */
-
-    .convention-countdown-section {
-        padding: 40px 0 45px;
-    }
-
-
-    /* AGENDA */
-
-    .convention-program::before {
-        left: 125px;
-    }
-
-    .convention-program-item {
-        grid-template-columns: 100px 50px 1fr;
-    }
-
-
-    /* PONENTES */
-
-    .speaker-card {
-        flex: 0 0 calc((100% - 24px) / 2);
-    }
-
-
-    /* FOLLETO */
-
-    .convention-brochure {
-        padding: 60px 40px;
-    }
-
-    .convention-brochure-viewer {
-        max-width: 750px;
-    }
-
-    .convention-brochure-viewer iframe {
-        height: 560px;
-    }
-
-}
-
-
-/* =========================================================
-   36. TABLET PEQUEÑA
-   ========================================================= */
-
-@media (max-width: 900px) {
+    /* UBICACIÓN */
 
     .convention-location {
         margin-bottom: 75px;
@@ -2171,23 +1867,49 @@
 
     .convention-location-grid {
         grid-template-columns: 1fr;
-
         gap: 2.5rem;
     }
 
-    .convention-location-map {
-        min-height: 380px;
-    }
-
+    .convention-location-map,
     .convention-location-map iframe {
         min-height: 380px;
     }
-
 }
 
 
 /* =========================================================
-   37. MÓVIL
+   48. RESPONSIVE · TABLET PEQUEÑA 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* AGENDA */
+
+    .agenda-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .agenda-card {
+        min-height: 380px;
+        padding: 26px;
+    }
+
+    .agenda-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .agenda-category {
+        text-align: left;
+    }
+}
+
+
+/* =========================================================
+   49. RESPONSIVE · MÓVIL 700px
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -2201,7 +1923,7 @@
     }
 
 
-    /* CTA HERO */
+    /* CTA */
 
     .hero-cta {
         margin-top: 1.5rem;
@@ -2210,9 +1932,7 @@
     .hero-cta-button {
         width: 100%;
         max-width: 320px;
-
         padding: 0.95rem 1.3rem;
-
         font-size: 0.8rem;
     }
 
@@ -2250,37 +1970,70 @@
 
     .convention-countdown-item span {
         margin-top: 7px;
-
         font-size: 0.55rem;
-
         letter-spacing: 0.08em;
     }
 
     .convention-countdown-separator {
         margin-top: -12px;
-
         font-size: 1.5rem;
     }
 
 
-    /* GRID TARJETAS */
+    /* TARJETAS GENERALES */
 
     .simple-grid {
         grid-template-columns: 1fr;
-
         gap: 15px;
-
         margin-top: 30px;
     }
 
     .simple-card {
         min-height: auto;
-
         padding: 25px;
     }
 
 
     /* AGENDA */
+
+    .agenda-header {
+        margin-bottom: 30px;
+    }
+
+    .agenda-intro {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+    .agenda-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .agenda-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .agenda-card-top {
+        margin-bottom: 18px;
+    }
+
+    .agenda-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .agenda-description {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .agenda-companies {
+        padding-top: 22px;
+    }
+
+
+    /* AGENDA / PROGRAMA ANTIGUO */
 
     .convention-agenda-header {
         margin-bottom: 35px;
@@ -2292,15 +2045,12 @@
 
     .convention-program-item {
         grid-template-columns: 55px 29px 1fr;
-
         min-height: 120px;
-
         padding-bottom: 30px;
     }
 
     .convention-program-time {
         font-size: 0.9rem;
-
         text-align: left;
     }
 
@@ -2311,7 +2061,6 @@
     .convention-program-marker span {
         width: 12px;
         height: 12px;
-
         border-width: 2px;
     }
 
@@ -2321,7 +2070,6 @@
 
     .convention-program-type {
         margin-bottom: 6px;
-
         font-size: 0.58rem;
     }
 
@@ -2331,7 +2079,6 @@
 
     .convention-program-info p {
         font-size: 0.88rem;
-
         line-height: 1.6;
     }
 
@@ -2356,9 +2103,144 @@
 
     .speakers-arrow {
         flex: 0 0 38px;
-
         width: 38px;
         height: 38px;
+    }
+
+
+    /* ORGANIZADOR */
+
+    .convention-organizer-section {
+        padding: 55px 0 60px;
+    }
+
+    .convention-organizer .convention-section-header {
+        margin-bottom: 30px;
+    }
+
+    .convention-organizer .convention-section-header h2 {
+        font-size: 2rem;
+    }
+
+    .convention-organizer .convention-section-header p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+    .convention-organizer-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .convention-organizer-image {
+        min-height: 240px;
+        padding: 35px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(4, 18, 34, 0.08);
+    }
+
+    .convention-organizer-image img {
+        max-width: 70%;
+        max-height: 170px;
+    }
+
+    .convention-organizer-info {
+        padding: 35px 30px 40px;
+    }
+
+    .convention-organizer-info h3 {
+        font-size: 2rem;
+    }
+
+    .convention-organizer-info p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+
+    /* PATROCINADORES */
+
+    .convention-sponsors-section {
+        padding: 60px 0 70px;
+    }
+
+    .convention-sponsors-header {
+        margin-bottom: 30px;
+    }
+
+    .convention-sponsors-header h2 {
+        font-size: 2rem;
+    }
+
+    .convention-sponsors-header p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+    .convention-sponsors-carousel {
+        gap: 10px;
+    }
+
+    .convention-sponsor-card {
+        flex: 0 0 100%;
+        height: 180px;
+        padding: 25px;
+    }
+
+    .convention-sponsors-arrow {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .convention-sponsor-logo img {
+        max-width: 75%;
+        max-height: 90px;
+    }
+
+
+    /* PATROCINIO OSCURO */
+
+    .convention-sponsors {
+        padding: 70px 0;
+    }
+
+    .sponsors-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .sponsors-header p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    .sponsor-option {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 18px;
+        padding: 25px 0;
+    }
+
+    .sponsor-option-content {
+        display: block;
+    }
+
+    .sponsor-option-content h3 {
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+    }
+
+    .sponsor-option-content p {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+    .sponsor-option-arrow {
+        display: none;
+    }
+
+    .sponsor-option:hover {
+        padding-left: 8px;
     }
 
 
@@ -2374,7 +2256,6 @@
 
     .convention-brochure-viewer {
         margin-top: 30px;
-
         border-radius: 6px;
     }
 
@@ -2411,7 +2292,6 @@
 
     .convention-location-map {
         min-height: 300px;
-
         border-radius: 8px;
     }
 
@@ -2421,15 +2301,13 @@
 
     .convention-location-button {
         width: 100%;
-
         justify-content: center;
     }
-
 }
 
 
 /* =========================================================
-   38. MÓVIL PEQUEÑO
+   50. RESPONSIVE · MÓVIL PEQUEÑO 480px
    ========================================================= */
 
 @media (max-width: 480px) {
@@ -2475,13 +2353,11 @@
 
     .convention-countdown-item span {
         font-size: 0.48rem;
-
         letter-spacing: 0.06em;
     }
 
     .convention-countdown-separator {
         font-size: 1.25rem;
-
         margin-top: -10px;
     }
 
@@ -2494,6 +2370,42 @@
 
 
     /* AGENDA */
+
+    .agenda-header {
+        margin-bottom: 25px;
+    }
+
+    .agenda-card {
+        padding: 22px;
+    }
+
+    .agenda-room {
+        font-size: 0.68rem;
+    }
+
+    .agenda-category {
+        font-size: 0.57rem;
+    }
+
+    .agenda-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .agenda-description {
+        font-size: 0.84rem;
+    }
+
+    .company-tags {
+        gap: 6px;
+    }
+
+    .company-tags span {
+        padding: 5px 8px;
+        font-size: 0.68rem;
+    }
+
+
+    /* AGENDA / PROGRAMA ANTIGUO */
 
     .convention-program::before {
         left: 62px;
@@ -2527,6 +2439,55 @@
     }
 
 
+    /* ORGANIZADOR */
+
+    .convention-organizer-section {
+        padding: 45px 0 50px;
+    }
+
+    .convention-organizer .convention-section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .convention-organizer-image {
+        min-height: 210px;
+        padding: 30px;
+    }
+
+    .convention-organizer-image img {
+        max-width: 75%;
+        max-height: 150px;
+    }
+
+    .convention-organizer-info {
+        padding: 30px 22px 35px;
+    }
+
+    .convention-organizer-info h3 {
+        font-size: 1.75rem;
+    }
+
+    .convention-organizer-info p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+
+    /* PATROCINADORES */
+
+    .convention-sponsors-section {
+        padding: 50px 0 60px;
+    }
+
+    .convention-sponsors-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .convention-sponsor-card {
+        height: 160px;
+    }
+
+
     /* FOLLETO */
 
     .convention-brochure {
@@ -2536,12 +2497,11 @@
     .convention-brochure-viewer iframe {
         height: 380px;
     }
-
 }
 
 
 /* =========================================================
-   39. ACCESIBILIDAD
+   51. ACCESIBILIDAD
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2552,8 +2512,407 @@
     .speaker-image img,
     .speakers-track,
     .speakers-arrow,
-    .speakers-dot {
+    .speakers-dot,
+    .agenda-card,
+    .company-tags span,
+    .convention-sponsor-card,
+    .convention-sponsor-logo img,
+    .convention-sponsors-track,
+    .convention-sponsors-arrow,
+    .convention-sponsors-dot,
+    .sponsor-option,
+    .sponsor-option-arrow {
         transition: none;
+    }
+}
+
+/* =========================================================
+   GALERÍA · CONVENCIÓN CPONET
+   ========================================================= */
+
+/* =========================================================
+   SECCIÓN
+   ========================================================= */
+
+.convention-gallery-section {
+
+    width: 100%;
+    margin-bottom: 110px;
+    padding: 0;
+
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.convention-gallery-header {
+
+    max-width: 850px;
+    margin-bottom: 45px;
+
+}
+
+.convention-gallery-header .eyebrow {
+
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--accent);
+
+}
+
+.convention-gallery-header h2 {
+
+    margin: 0 0 18px;
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+
+}
+
+.convention-gallery-header p {
+
+    max-width: 720px;
+    margin: 0;
+    color: #667383;
+    font-size: 0.98rem;
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CARRUSEL
+   ========================================================= */
+
+.convention-gallery-carousel {
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL TRACK
+   ========================================================= */
+
+.convention-gallery-track-wrapper {
+
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.convention-gallery-track {
+
+    display: flex;
+    gap: 20px;
+
+    transition: transform 0.45s ease;
+    will-change: transform;
+
+}
+
+
+/* =========================================================
+   TARJETA DE FOTO
+   ========================================================= */
+
+.convention-gallery-card {
+
+    flex: 0 0 calc((100% - 40px) / 3);
+
+    min-width: 0;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(4, 18, 34, 0.08);
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(4, 18, 34, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.convention-gallery-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(4, 18, 34, 0.10);
+
+}
+
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
+
+.convention-gallery-image {
+
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #eef2f5;
+
+}
+
+.convention-gallery-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.45s ease;
+
+}
+
+.convention-gallery-card:hover
+.convention-gallery-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================================
+   FLECHAS
+   ========================================================= */
+
+.convention-gallery-arrow {
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(4, 18, 34, 0.15);
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--navy);
+
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+.convention-gallery-arrow:hover {
+
+    background: var(--accent);
+
+    border-color: var(--accent);
+
+    color: var(--navy);
+
+    transform: translateY(-2px);
+
+}
+
+.convention-gallery-arrow:disabled {
+
+    opacity: 0.35;
+
+    cursor: default;
+
+    transform: none;
+
+}
+
+
+/* =========================================================
+   INDICADORES
+   ========================================================= */
+
+.convention-gallery-dots {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+}
+
+.convention-gallery-dot {
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #c7d0d9;
+
+    cursor: pointer;
+
+    transition:
+        width 0.25s ease,
+        background 0.25s ease;
+
+}
+
+.convention-gallery-dot.is-active {
+
+    width: 24px;
+
+    border-radius: 20px;
+
+    background: var(--accent);
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .convention-gallery-section {
+
+        margin-bottom: 85px;
+
+    }
+
+    .convention-gallery-card {
+
+        flex: 0 0 calc((100% - 20px) / 2);
+
+    }
+
+    .convention-gallery-image {
+
+        height: 260px;
+
     }
 
 }
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .convention-gallery-section {
+
+        margin-bottom: 65px;
+
+    }
+
+    .convention-gallery-header {
+
+        margin-bottom: 30px;
+
+    }
+
+    .convention-gallery-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .convention-gallery-header p {
+
+        font-size: 0.92rem;
+        line-height: 1.7;
+
+    }
+
+    .convention-gallery-carousel {
+
+        gap: 10px;
+
+    }
+
+    .convention-gallery-card {
+
+        flex: 0 0 100%;
+
+    }
+
+    .convention-gallery-image {
+
+        height: 300px;
+
+    }
+
+    .convention-gallery-arrow {
+
+        flex: 0 0 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .convention-gallery-section {
+
+        margin-bottom: 55px;
+
+    }
+
+    .convention-gallery-header h2 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .convention-gallery-image {
+
+        height: 240px;
+
+    }
+
+}
+
+
+

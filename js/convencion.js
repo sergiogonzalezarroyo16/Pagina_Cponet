@@ -10,16 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    const daysElement = document.getElementById("conventionCountdownDays");
-    const hoursElement = document.getElementById("conventionCountdownHours");
-    const minutesElement = document.getElementById("conventionCountdownMinutes");
-    const secondsElement = document.getElementById("conventionCountdownSeconds");
+    const daysElement =
+        document.getElementById("conventionCountdownDays");
+
+    const hoursElement =
+        document.getElementById("conventionCountdownHours");
+
+    const minutesElement =
+        document.getElementById("conventionCountdownMinutes");
+
+    const secondsElement =
+        document.getElementById("conventionCountdownSeconds");
+
 
     /*
        21 de octubre de 2026 · 09:00 hora española
     */
 
-    const targetDate = new Date("2026-10-21T09:00:00+02:00").getTime();
+    const targetDate =
+        new Date("2026-10-21T09:00:00+02:00").getTime();
 
 
     function updateCountdown() {
@@ -29,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const distance = targetDate - now;
 
 
-        /* Evento alcanzado */
+        /* EVENTO ALCANZADO */
 
         if (distance <= 0) {
 
@@ -40,25 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             countdown.classList.add("finished");
 
-            const header = countdown.querySelector(
-                ".convention-countdown-header"
-            );
-
-            if (header) {
-
-                header.querySelector("h2").textContent =
-                    "¡La Convención ha comenzado!";
-
-                header.querySelector("p").textContent =
-                    "21 de octubre de 2026 · Kinépolis Ciudad de la Imagen";
-
-            }
-
             return;
         }
 
 
-        /* Cálculo del tiempo */
+        /* CÁLCULO */
 
         const days = Math.floor(
             distance / (1000 * 60 * 60 * 24)
@@ -80,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        /* Mostrar valores */
+        /* MOSTRAR */
 
         daysElement.textContent =
             String(days).padStart(2, "0");
@@ -97,16 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* Primera ejecución */
-
     updateCountdown();
-
-
-    /* Actualizar cada segundo */
 
     setInterval(updateCountdown, 1000);
 
 });
+
+
 
 /* =========================================================
    CARRUSEL DE PATROCINADORES
@@ -297,6 +289,239 @@ document.addEventListener("DOMContentLoaded", () => {
         refreshCarousel
     );
 
+
+    refreshCarousel();
+
+});
+
+/* =========================================================
+   CARRUSEL DE GALERÍA · CONVENCIÓN CPONET
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const track = document.querySelector(".convention-gallery-track");
+    const cards = document.querySelectorAll(".convention-gallery-card");
+
+    const prevButton = document.querySelector(
+        ".convention-gallery-prev"
+    );
+
+    const nextButton = document.querySelector(
+        ".convention-gallery-next"
+    );
+
+    const dotsContainer = document.querySelector(
+        ".convention-gallery-dots"
+    );
+
+
+    if (
+        !track ||
+        !cards.length ||
+        !prevButton ||
+        !nextButton ||
+        !dotsContainer
+    ) {
+        return;
+    }
+
+
+    let currentIndex = 0;
+
+
+    /* =====================================================
+       TARJETAS VISIBLES
+       ===================================================== */
+
+    function getVisibleCards() {
+
+        if (window.innerWidth <= 700) {
+            return 1;
+        }
+
+        if (window.innerWidth <= 1000) {
+            return 2;
+        }
+
+        return 3;
+    }
+
+
+    /* =====================================================
+       ÍNDICE MÁXIMO
+       ===================================================== */
+
+    function getMaxIndex() {
+
+        return Math.max(
+            0,
+            cards.length - getVisibleCards()
+        );
+    }
+
+
+    /* =====================================================
+       CREAR DOTS
+       ===================================================== */
+
+    function createDots() {
+
+        dotsContainer.innerHTML = "";
+
+        const maxIndex = getMaxIndex();
+
+        for (let i = 0; i <= maxIndex; i++) {
+
+            const dot = document.createElement("button");
+
+            dot.type = "button";
+
+            dot.classList.add(
+                "convention-gallery-dot"
+            );
+
+            dot.setAttribute(
+                "aria-label",
+                `Ir al grupo ${i + 1}`
+            );
+
+
+            if (i === currentIndex) {
+
+                dot.classList.add("is-active");
+
+            }
+
+
+            dot.addEventListener("click", () => {
+
+                currentIndex = i;
+
+                updateCarousel();
+
+            });
+
+
+            dotsContainer.appendChild(dot);
+
+        }
+
+    }
+
+
+    /* =====================================================
+       ACTUALIZAR CARRUSEL
+       ===================================================== */
+
+    function updateCarousel() {
+
+        const cardWidth = cards[0].offsetWidth;
+
+        const gap = 20;
+
+        const offset =
+            currentIndex *
+            (cardWidth + gap);
+
+
+        track.style.transform =
+            `translateX(-${offset}px)`;
+
+
+        /* BOTÓN ANTERIOR */
+
+        prevButton.disabled =
+            currentIndex === 0;
+
+
+        /* BOTÓN SIGUIENTE */
+
+        nextButton.disabled =
+            currentIndex >= getMaxIndex();
+
+
+        /* DOTS */
+
+        const dots =
+            dotsContainer.querySelectorAll(
+                ".convention-gallery-dot"
+            );
+
+
+        dots.forEach((dot, index) => {
+
+            dot.classList.toggle(
+                "is-active",
+                index === currentIndex
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       BOTÓN ANTERIOR
+       ===================================================== */
+
+    prevButton.addEventListener("click", () => {
+
+        if (currentIndex > 0) {
+
+            currentIndex--;
+
+            updateCarousel();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       BOTÓN SIGUIENTE
+       ===================================================== */
+
+    nextButton.addEventListener("click", () => {
+
+        if (currentIndex < getMaxIndex()) {
+
+            currentIndex++;
+
+            updateCarousel();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    function refreshCarousel() {
+
+        currentIndex = Math.min(
+            currentIndex,
+            getMaxIndex()
+        );
+
+        createDots();
+
+        updateCarousel();
+
+    }
+
+
+    window.addEventListener(
+        "resize",
+        refreshCarousel
+    );
+
+
+    /* =====================================================
+       INICIALIZAR
+       ===================================================== */
 
     refreshCarousel();
 
