@@ -1,0 +1,102 @@
+/* =========================================================
+   HERO DE CADA NOTICIA
+   ========================================================= */
+
+.inner-hero {
+    position: relative;
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+/* Overlay para mejorar la lectura del texto */
+.inner-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(7, 27, 53, 0.65);
+
+    z-index: 1;
+}
+
+.inner-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   NOTICIA 1
+   ========================================================= */
+
+.inner-hero.noticia-1 {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&auto=format&fit=crop");
+}
+
+
+/* =========================================================
+   NOTICIA 2
+   ========================================================= */
+
+.inner-hero.noticia-2 {
+    background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&auto=format&fit=crop");
+}
+
+
+/* =========================================================
+   NOTICIA 3
+   ========================================================= */
+
+.inner-hero.noticia-3 {
+    background-image: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&auto=format&fit=crop");
+}
+
+
+/* =========================================================
+   NOTICIA 4
+   ========================================================= */
+
+.inner-hero.noticia-4 {
+    background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?w=700&auto=format&fit=crop");
+}
+
+
+/* =========================================================
+   NOTICIA 5
+   ========================================================= */
+
+.inner-hero.noticia-5 {
+    background-image: url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=700&auto=format&fit=crop");
+}
+
+
+/* =========================================================
+   NOTICIA 6
+   ========================================================= */
+
+.inner-hero.noticia-6 {
+    background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&auto=format&fit=crop");
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.inner-hero h1 {
+    max-width: 950px;
+    color: #ffffff;
+}
+
+.inner-hero p {
+    max-width: 750px;
+    color: rgba(255, 255, 255, 0.9);
+}
