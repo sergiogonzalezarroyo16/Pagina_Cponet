@@ -79,11 +79,67 @@
 
 
 /* =========================================================
-   NOTICIA 6
+   HERO DIVIDIDO (texto izquierda / foto derecha)
    ========================================================= */
 
-.inner-hero.noticia-6 {
-    background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&auto=format&fit=crop");
+.inner-hero-split {
+    background-image: none;
+    background-color: #071b35;
+    min-height: 560px;
+}
+
+.inner-hero-split::before {
+    display: none;
+}
+
+.hero-split-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 480px;
+}
+
+.hero-photo {
+    flex: 0 0 420px;
+    display: flex;
+    justify-content: center;
+    margin-right: -10rem;
+}
+
+.hero-photo img {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Responsive: en móvil, la foto pasa debajo del texto */
+@media (max-width: 768px) {
+
+    .hero-split-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-photo {
+        order: -1;
+        flex: 0 0 auto;
+        max-width: 280px;
+        margin-right: 0;
+    }
+
+    .hero-photo img {
+        max-width: 280px;
+    }
+
 }
 
 
