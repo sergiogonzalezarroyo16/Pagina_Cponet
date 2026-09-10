@@ -972,6 +972,9 @@
     font-weight: 700;
 
 }
+.webinar-focus .eyebrow {
+    color: var(--accent);
+}
 
 
 /* =========================================================
